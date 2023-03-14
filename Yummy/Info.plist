@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Zeyada-Regular.ttf</string>
+		<string>Satisfy-Regular.ttf</string>
+		<string>Almarai-Regular.ttf</string>
+		<string>Almarai-Light.ttf</string>
+		<string>Almarai-Bold.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
