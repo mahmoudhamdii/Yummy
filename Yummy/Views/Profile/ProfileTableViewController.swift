@@ -18,12 +18,12 @@ class ProfileTableViewController: UITableViewController {
  
     override func numberOfSections(in tableView: UITableView) -> Int {
       
-        return 4
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-            var numOfRows = [1,4,2,2]
+            var numOfRows = [1,3]
             return numOfRows[section]
        
     }

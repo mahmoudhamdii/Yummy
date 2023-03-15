@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     var arrspecials = [Dish]()
     var arrCategory = [DishCategory]()
     override func viewDidLoad() {
+       
+       
         super.viewDidLoad()
         registerNib()
         

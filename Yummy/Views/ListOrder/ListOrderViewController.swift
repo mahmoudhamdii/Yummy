@@ -8,24 +8,44 @@
 import UIKit
 import ProgressHUD
 class ListOrderViewController: UIViewController {
-var orders = [Order]()
+    @IBOutlet weak var noOrdersView: CardView!
+    var orders = [Order](){
+        didSet {
+            
+            listOrderTableView.isHidden = orders.isEmpty
+            noOrdersView.isHidden  = !listOrderTableView.isHidden
+            listOrderTableView.reloadData()
+        }
+        
+    }
    
     @IBOutlet weak var listOrderTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
         title = "Orders"
-        if orders.count == 0 {
-            listOrderTableView.isHidden = true
-
-        }
+        
        
     }
     
     @IBAction func btnGoHomePressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "HomeUI", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HomeNC")as!UINavigationController
-        present(vc, animated: true,completion: nil)
+        // Assuming you have a reference to the app's tab bar controller
+        let tabBarController = self.tabBarController!
+
+        // Determine which tab you want to switch to (e.g. the second tab)
+        let desiredTabIndex = 0
+
+        // Get a reference to the view controller that represents the desired tab
+//        let desiredViewController = tabBarController.viewControllers![desiredTabIndex]
+
+        // Set the selected index of the tab bar controller to the desired index
+        tabBarController.selectedIndex = desiredTabIndex
+
+        // Set the new set of view controllers for the tab bar controller
+//        tabBarController.setViewControllers([desiredViewController], animated: true)
+//        let storyboard = UIStoryboard(name: "HomeUI", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "HomeNC")as!UINavigationController
+//        present(vc, animated: true,completion: nil)
     }
     override func viewDidAppear(_ animated: Bool) {
         ProgressHUD.show()
