@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awh-tc-wJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4469.4656488549617" y="-1347.1830985915494"/>
+            <point key="canvasLocation" x="3430" y="-1347"/>
         </scene>
         <!--ProfileUI-->
         <scene sceneID="ff9-9n-7vp">
@@ -45,7 +45,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCX-5h-edQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5130.5343511450383" y="-1620.4225352112676"/>
+            <point key="canvasLocation" x="4184" y="-1662"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bop-6O-Lct">
@@ -80,12 +80,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4O-73-0Lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="-1638"/>
+            <point key="canvasLocation" x="1972" y="-1662"/>
         </scene>
         <!--Orders-->
         <scene sceneID="JVq-z2-S2d">
             <objects>
-                <viewController storyboardIdentifier="ListOrderViewController" id="GHf-QJ-7AI" customClass="ListOrderViewController" customModule="Yummy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListOrderViewController" id="GHf-QJ-7AI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fxo-6S-E4Q">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhZ-kf-8H2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3681.679389312977" y="-1347.1830985915494"/>
+            <point key="canvasLocation" x="2712" y="-1347"/>
         </scene>
     </scenes>
     <resources>

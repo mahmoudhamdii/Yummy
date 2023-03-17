@@ -18,4 +18,8 @@ extension UIView {
             
         }
     }
+    static func setBorder(view:UIView){
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.darkGray.cgColor
+    }
 }

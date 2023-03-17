@@ -16,6 +16,7 @@
 		3631797729A97359002C421D /* DishPortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631797529A97359002C421D /* DishPortraitCollectionViewCell.swift */; };
 		3631797829A97359002C421D /* DishPortraitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3631797629A97359002C421D /* DishPortraitCollectionViewCell.xib */; };
 		3631797A29A976FD002C421D /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631797929A976FD002C421D /* Dish.swift */; };
+		36387CB129C37A15004F489F /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36387CB029C37A15004F489F /* CheckOutViewController.swift */; };
 		36559D5729B8BEEE00E976B9 /* Utalities+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36559D5629B8BEEE00E976B9 /* Utalities+Extensions.swift */; };
 		3655E38C29BA3C9A00B7BB75 /* UserAuthorizationUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3655E38B29BA3C9A00B7BB75 /* UserAuthorizationUI.storyboard */; };
 		3655E38E29BA3D9400B7BB75 /* HomeUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3655E38D29BA3D9400B7BB75 /* HomeUI.storyboard */; };
@@ -76,6 +77,7 @@
 		3631797529A97359002C421D /* DishPortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPortraitCollectionViewCell.swift; sourceTree = "<group>"; };
 		3631797629A97359002C421D /* DishPortraitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPortraitCollectionViewCell.xib; sourceTree = "<group>"; };
 		3631797929A976FD002C421D /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		36387CB029C37A15004F489F /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
 		36559D5629B8BEEE00E976B9 /* Utalities+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utalities+Extensions.swift"; sourceTree = "<group>"; };
 		3655E38B29BA3C9A00B7BB75 /* UserAuthorizationUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserAuthorizationUI.storyboard; sourceTree = "<group>"; };
 		3655E38D29BA3D9400B7BB75 /* HomeUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeUI.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,14 @@
 			path = DishPortraitCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		36387CB229C37A2C004F489F /* CheckOut */ = {
+			isa = PBXGroup;
+			children = (
+				36387CB029C37A15004F489F /* CheckOutViewController.swift */,
+			);
+			path = CheckOut;
+			sourceTree = "<group>";
+		};
 		3655E39129BA434A00B7BB75 /* ProfieTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +248,7 @@
 		368418CE29A7D69B00E7A36B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				36387CB229C37A2C004F489F /* CheckOut */,
 				3655E39629BA4DCE00B7BB75 /* Profile */,
 				36BD9A8E29AEF8A800B219F1 /* SignUp */,
 				36BD9A8D29AEF88E00B219F1 /* Login */,
@@ -590,6 +601,7 @@
 				36CDFF8D29AD8DB400FC6B6B /* AllDishes.swift in Sources */,
 				3655E39429BA43A700B7BB75 /* ProfileTableViewCell.swift in Sources */,
 				3685397D29AA62DD002CC59C /* DishDetailViewController.swift in Sources */,
+				36387CB129C37A15004F489F /* CheckOutViewController.swift in Sources */,
 				36CDFF8729ACE6FE00FC6B6B /* Method.swift in Sources */,
 				3695C50C29A82FC1005C828B /* OnboardindCollectionViewCell.swift in Sources */,
 				368A5B7C29BF417B008BA902 /* UIButton+Extensions.swift in Sources */,
