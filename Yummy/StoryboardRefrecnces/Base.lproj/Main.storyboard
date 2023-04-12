@@ -64,12 +64,11 @@
                         <segue destination="0fB-cQ-dff" kind="relationship" relationship="viewControllers" id="ajK-YG-DYw"/>
                         <segue destination="G0g-0s-sTp" kind="relationship" relationship="viewControllers" id="IGU-V0-YPQ"/>
                         <segue destination="zqv-pZ-2CK" kind="relationship" relationship="viewControllers" id="ahi-bL-icx"/>
-                        <segue destination="GHf-QJ-7AI" kind="relationship" relationship="viewControllers" id="vCi-dO-fun"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYL-oZ-My4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3082" y="-2242"/>
+            <point key="canvasLocation" x="3057" y="-2338"/>
         </scene>
         <!--HomeUI-->
         <scene sceneID="psM-pw-eV4">
@@ -128,7 +127,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnGoHomePressed:" destination="GHf-QJ-7AI" eventType="touchUpInside" id="OyX-l9-z3h"/>
+                                            <action selector="goHomeTapped:" destination="NmS-r6-fsg" eventType="touchUpInside" id="4lx-fN-Ava"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -153,7 +152,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qLU-4k-g5a">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="GHf-QJ-7AI" id="M7W-EE-ziK"/>
@@ -178,8 +177,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhZ-kf-8H2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NmS-r6-fsg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="-1347"/>
+            <point key="canvasLocation" x="2718" y="-1392"/>
         </scene>
     </scenes>
     <resources>

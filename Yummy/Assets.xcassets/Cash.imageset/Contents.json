@@ -5,11 +5,7 @@
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "placeholder.png",
+      "filename" : "payment.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

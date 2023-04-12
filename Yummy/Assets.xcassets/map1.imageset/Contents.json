@@ -1,15 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "earth-globe.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "placeholder.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

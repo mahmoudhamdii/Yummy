@@ -8,12 +8,17 @@
 import UIKit
 import ProgressHUD
 class ListOrderViewController: UIViewController {
+  
     @IBOutlet weak var noOrdersView: CardView!
+    
+    @IBOutlet weak var ordersViews: CardView!
+    
+    
     var orders = [Order](){
         didSet {
-            
-            listOrderTableView.isHidden = orders.isEmpty
-            noOrdersView.isHidden  = !listOrderTableView.isHidden
+            ordersViews.isHidden = orders.isEmpty
+            listOrderTableView.isHidden = ordersViews.isHidden
+            noOrdersView.isHidden = !ordersViews.isHidden
             listOrderTableView.reloadData()
         }
         
@@ -24,20 +29,31 @@ class ListOrderViewController: UIViewController {
         super.viewDidLoad()
         registerCell()
         title = "Orders"
-        
+        orders.removeAll()
        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if orders.isEmpty == true {
+            noOrdersView.isHidden = false
+            ordersViews.isHidden = true
+            listOrderTableView.isHidden = true
+        }
+        else{
+            ordersViews.isHidden = false
+            listOrderTableView.isHidden = false
+            noOrdersView.isHidden = true
+        }
+    }
     
-    @IBAction func btnGoHomePressed(_ sender: Any) {
-        
-//        let tabBarController = self.tabBarController!
-//        let desiredTabIndex = 0
-//        tabBarController.selectedIndex = desiredTabIndex
-        let storryBoard = UIStoryboard(name: "HomeUI", bundle: nil)
-        let controller =  storryBoard.instantiateViewController(withIdentifier: "HomeNC")as!UINavigationController
-        present(controller, animated: true,completion: nil)
+    
+    @IBAction func goHomeTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        tabBarController?.tabBar.isHidden = false
         
     }
+    
+  
+
     override func viewDidAppear(_ animated: Bool) {
         ProgressHUD.show()
         NetworkService.shared.fetchOrders { [weak self] (result) in
@@ -45,7 +61,7 @@ class ListOrderViewController: UIViewController {
                 
             case .success(let orders):
                 ProgressHUD.dismiss()
-                self?.orders =  orders
+               self?.orders =  orders
                 self?.listOrderTableView.reloadData()
             case .failure(let error):
                 ProgressHUD.showError(error.localizedDescription)

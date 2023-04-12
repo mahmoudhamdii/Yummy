@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
        
        
         super.viewDidLoad()
+        
         registerNib()
         
         
@@ -56,6 +57,39 @@ class HomeViewController: UIViewController {
             }
         }
 
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        createBarButtonBadge(badge: 10)
+        tabBarController?.tabBar.isHidden = false
+    }
+    func createBarButtonBadge(badge :Int){
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        button.layer.cornerRadius = button.frame.width / 2.0
+        button.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9960784314, blue: 0.9960784314, alpha: 1)
+        let color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        button.setImage(UIImage(systemName: "cart.fill")!.withTintColor(color, renderingMode: .alwaysOriginal), for: .normal)
+        let badgeLabel = UILabel(frame: CGRect(x: button.frame.width - 18, y: 25, width: 20, height: 20))
+        badgeLabel.layer.cornerRadius = badgeLabel.frame.width / 2.0
+        badgeLabel.layer.masksToBounds = true
+        badgeLabel.textAlignment = .center
+        badgeLabel.backgroundColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
+        badgeLabel.textColor = #colorLiteral(red: 0.9960784314, green: 0.9960784314, blue: 0.9960784314, alpha: 1)
+        let customFont = UIFont(name: "Almarai-Bold", size: 14.0)!
+        badgeLabel.font = customFont
+        badgeLabel.text = "10"
+        button.addSubview(badgeLabel)
+        button.addTarget(self, action: #selector(ordersButtonTapped), for: .touchUpInside)
+        let barButtonItem = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = barButtonItem
+        
+        
+    }
+    @objc func ordersButtonTapped(){
+        let controller = ListOrderViewController.instantiate(storyBord: "HomeUI")
+        navigationController?.pushViewController(controller, animated: true)
+        tabBarController?.tabBar.isHidden = true
         
     }
     private func registerNib (){

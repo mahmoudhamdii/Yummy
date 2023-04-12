@@ -53,9 +53,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="g34-jf-aaL" firstAttribute="leading" secondItem="rOH-7j-jfa" secondAttribute="leading" constant="16" id="4fB-n6-PU1"/>
+                            <constraint firstAttribute="trailing" secondItem="pQr-CJ-phK" secondAttribute="trailing" constant="16" id="60n-hY-ldj"/>
                             <constraint firstItem="pQr-CJ-phK" firstAttribute="bottom" secondItem="g34-jf-aaL" secondAttribute="bottom" id="7J5-Hv-I4h"/>
                             <constraint firstAttribute="bottom" secondItem="g34-jf-aaL" secondAttribute="bottom" constant="16" id="7qO-yZ-8yr"/>
-                            <constraint firstAttribute="trailing" secondItem="pQr-CJ-phK" secondAttribute="trailing" constant="16" id="b5P-PF-XnF"/>
                             <constraint firstItem="pQr-CJ-phK" firstAttribute="top" secondItem="g34-jf-aaL" secondAttribute="top" id="jTH-Dc-IFx"/>
                             <constraint firstItem="pQr-CJ-phK" firstAttribute="leading" secondItem="g34-jf-aaL" secondAttribute="trailing" constant="16" id="oEb-Pt-Ze6"/>
                             <constraint firstItem="g34-jf-aaL" firstAttribute="top" secondItem="rOH-7j-jfa" secondAttribute="top" constant="16" id="sB9-OP-Dab"/>
@@ -77,7 +77,7 @@
                 <outlet property="lblDescription" destination="ja4-re-kh3" id="t50-GB-N2t"/>
                 <outlet property="lblTittle" destination="iDi-mT-qbT" id="R6q-jY-Ifg"/>
             </connections>
-            <point key="canvasLocation" x="-55.725190839694655" y="27.112676056338028"/>
+            <point key="canvasLocation" x="-55.725190839694655" y="26.760563380281692"/>
         </tableViewCell>
     </objects>
     <resources>
