@@ -37,8 +37,10 @@ import ProgressHUD
                     ProgressHUD.showError(error?.localizedDescription)
                     //can't sign in
                 }else{
-                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeNC")
-                    self.present(controller!, animated: true)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "MainSB")
+                    
+                    self.present(controller, animated: true)
                 }
         }
        

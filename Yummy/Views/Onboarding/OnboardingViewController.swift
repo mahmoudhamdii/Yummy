@@ -42,10 +42,12 @@ class OnboardingViewController: UIViewController {
             collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
             pageControl.currentPage = currentPage
         }else {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "HomeNC")as!UINavigationController
-            vc.modalTransitionStyle = .partialCurl
-            present(vc, animated: true,completion: nil)
             UserDefaults.standard.hasOnboarded = true
+            let storyBoard = UIStoryboard(name: "UserAuthorizationUI", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: "login&signup")
+           
+            present(vc, animated: true,completion: nil)
+           
         }
         
     }

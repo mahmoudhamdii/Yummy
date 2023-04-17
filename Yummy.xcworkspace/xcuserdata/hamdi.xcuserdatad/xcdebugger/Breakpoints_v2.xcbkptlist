@@ -3,4 +3,114 @@
    uuid = "21185399-4BDD-43FB-B543-C954E6AF9401"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA5BA081-43FF-4995-BD7F-FDEBD89EA7CE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yummy/Custom Views/TableViewCells/PaymentTableViewCell/PaymentTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "PaymentTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "AA5BA081-43FF-4995-BD7F-FDEBD89EA7CE - 2bd3ad09032109da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummy.PaymentTableViewCell.lbltittle.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Yummy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hamdi/Desktop/stu/Yummy/Yummy/Custom%20Views/TableViewCells/PaymentTableViewCell/PaymentTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "AA5BA081-43FF-4995-BD7F-FDEBD89EA7CE - ccbe2e14567345d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummy.PaymentTableViewCell.lbltittle.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Yummy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hamdi/Desktop/stu/Yummy/Yummy/Custom%20Views/TableViewCells/PaymentTableViewCell/PaymentTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "AA5BA081-43FF-4995-BD7F-FDEBD89EA7CE - 8f9ff5842bd16ac7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummy.PaymentTableViewCell.lbltittle.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Yummy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hamdi/Desktop/stu/Yummy/Yummy/Custom%20Views/TableViewCells/PaymentTableViewCell/PaymentTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "AA5BA081-43FF-4995-BD7F-FDEBD89EA7CE - 4336c51cfac5de7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummy.PaymentTableViewCell.lbltittle.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Yummy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hamdi/Desktop/stu/Yummy/Yummy/Custom%20Views/TableViewCells/PaymentTableViewCell/PaymentTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "AA5BA081-43FF-4995-BD7F-FDEBD89EA7CE - c455ab1d1a532188"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummy.PaymentTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Yummy.PaymentTableViewCell"
+                  moduleName = "Yummy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hamdi/Desktop/stu/Yummy/Yummy/Custom%20Views/TableViewCells/PaymentTableViewCell/PaymentTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "233">
+               </Location>
+               <Location
+                  uuid = "AA5BA081-43FF-4995-BD7F-FDEBD89EA7CE - 5c836d19a081bd77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yummy.PaymentTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Yummy.PaymentTableViewCell&gt;"
+                  moduleName = "Yummy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hamdi/Desktop/stu/Yummy/Yummy/Custom%20Views/TableViewCells/PaymentTableViewCell/PaymentTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "190">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

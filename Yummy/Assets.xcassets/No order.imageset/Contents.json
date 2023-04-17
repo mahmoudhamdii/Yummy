@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "NO order ios.jpg",
+      "filename" : "Screen Shot 2023-04-13 at 09.35.12.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "NO order ios@2x.jpg",
+      "filename" : "Screen Shot 2023-04-13 at 09.35.12@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "NO order ios@3x.jpg",
+      "filename" : "Screen Shot 2023-04-13 at 09.35.12@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

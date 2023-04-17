@@ -11,6 +11,8 @@
 		<string>Almarai-Regular.ttf</string>
 		<string>Almarai-Light.ttf</string>
 		<string>Almarai-Bold.ttf</string>
+		<string>SourceSerifPro-Light.ttf</string>
+		<string>SourceSerifPro-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -25,8 +27,6 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
 				</dict>
 			</array>
 		</dict>

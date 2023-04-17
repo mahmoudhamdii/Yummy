@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class AdressDataViewController: UIViewController {
+    var areaName = ""
     var areaFlag = true
     var streetFlag = true
     var buildingTypeFlag = true
@@ -17,8 +20,9 @@ class AdressDataViewController: UIViewController {
     var landMarkFlag = true
     var mobileNumberFlag = true
     var optionalNumberFlag = true
-    
-    
+   var arrBuildingType = ["Street" ,"Cafe","House","Office"]
+    @IBOutlet weak var addressMapView: MKMapView!
+    var currentindex = 0
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var optionalLandingNumber: UITextField!
     @IBOutlet weak var mobileNumber: UITextField!
@@ -31,7 +35,22 @@ class AdressDataViewController: UIViewController {
     @IBOutlet weak var areaTxf: UITextField!
     @IBOutlet weak var btnRefineLoction: UIButton!
     override func viewDidLoad() {
+        
+        let pikerView = UIPickerView()
+        pikerView.delegate = self
+        pikerView.dataSource = self
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let btnDone = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(closePiker))
+        toolBar.setItems([btnDone], animated: true)
+        buildingType.inputView = pikerView
+        buildingType.inputAccessoryView = toolBar
+        title = "New Address"
         super.viewDidLoad()
+        addressMapView.setRegion(  MapViewController.region!, animated: true)
+        addressMapView.isScrollEnabled = false
+        addressMapView.isZoomEnabled = false
+        addressMapView.isUserInteractionEnabled = false
         btnRefineLocationSetup()
         fieldStyle(fields: [areaTxf,streetNameTxf,buildingType,floorNumber,buildingName,adressName,landMark,mobileNumber,optionalLandingNumber])
         //        areaTxf.delegate = self
@@ -42,6 +61,8 @@ class AdressDataViewController: UIViewController {
         //        adressName.delegate = self
         //        landMark.delegate = self
         //        optionalLandingNumber.delegate = self
+        navigationController?.navigationBar.tintColor =   #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
+        navigationItem.backButtonTitle = ""
         areaTxf.addTarget(self, action: #selector(creatAreaLable), for: .editingChanged)
         streetNameTxf.addTarget(self, action: #selector(creatStreetNameLable), for: .editingChanged)
         buildingType.addTarget(self, action: #selector(creatBuildingTypeLable), for: .editingChanged)
@@ -51,9 +72,16 @@ class AdressDataViewController: UIViewController {
         landMark.addTarget(self, action: #selector(creatLandMarkLable), for: .editingChanged)
         mobileNumber.addTarget(self, action: #selector(creatMobileNumberLable), for: .editingChanged)
         optionalLandingNumber.addTarget(self, action: #selector(creatOptionalNumberLable), for: .editingChanged)
+        if areaName != ""{
+            areaTxf.text = areaName
+        }
         
         
     }
+  
+ 
+     
+       
     func fieldStyle(fields:[UITextField]){
         for textField in fields{
             let bottomLine = CALayer()
@@ -292,6 +320,86 @@ class AdressDataViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func btnSaveAdressAction(_ sender: Any) {
+        if validateTextFields(fields: [areaTxf,streetNameTxf,buildingName,buildingType,floorNumber,adressName,landMark,mobileNumber]) {
+            if isValidEgyptPhoneNumber(mobileNumber.text!){
+                //send OTP to mobile number
+                sendOTP(mobile :mobileNumber.text!)
+                //validate OTp
+                let controller = OTPViewController.instantiate(storyBord: "HomeUI")
+                
+                controller.area = areaTxf.text!
+                controller.streetName = streetNameTxf.text!
+                controller.mobile = mobileNumber.text!
+                navigationController?.pushViewController(controller, animated: true)
+            }else{
+               showAlert(tittle: "Unavailable", msg: "please enter Valid phone number ")
+            }
+            
+            
+        }else{
+            
+            showAlert(tittle: "Unavailable", msg: "please fill all require fields!")
+            
+        }
+    }
+    func sendOTP (mobile :String){
+        
+    }
+    func isValidEgyptPhoneNumber(_ phoneNumber: String) -> Bool {
+        let regex = #"^(10|11|12|15)\d{8}$"#
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: phoneNumber)
+    }
+    
+    func validateTextFields(fields:[UITextField]) -> Bool {
+        var isValid = true
+        
+        
+        for textField in fields {
+            
+            if textField.text?.isEmpty ?? true {
+                isValid = false
+                break
+            }
+        }
+        
+        return isValid
+    }
+    func  showAlert(tittle:String,msg:String){
+        let alertController = UIAlertController(title: tittle, message: msg, preferredStyle: .alert)
+    
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+        
+        }
+        alertController.addAction(okAction)
+
+        self.present(alertController, animated: true, completion: nil)
+
+    }
+
     
 }
 
+extension AdressDataViewController :UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        arrBuildingType.count    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return arrBuildingType[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentindex = row
+        buildingType.text = arrBuildingType[row]
+    }
+    
+    @objc func closePiker(){
+        buildingType.text = arrBuildingType[currentindex]
+        view.endEditing(true)
+    }
+}

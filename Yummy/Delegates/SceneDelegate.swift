@@ -13,7 +13,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
+       
+        var controller :UIViewController!
+        if UserDefaults.standard.hasOnboarded {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            controller = storyBoard.instantiateViewController(withIdentifier: "MainSB")
+            
+        }
+        else{
+            controller  = OnboardingViewController.instantiate(storyBord: "OnBordingUI")
+
+        }
+        
+        window?.rootViewController = controller
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

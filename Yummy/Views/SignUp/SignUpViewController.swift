@@ -45,12 +45,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
         return nil
     }
-  
+    
     
     @IBAction func btnSignupPressed(_ sender: Any) {
-       
+        
         // validate fields ///////////////////
-       // ProgressHUD.show()
+        // ProgressHUD.show()
         let error = validateFields()
         if error != nil {
             //ProgressHUD.showError(error)
@@ -82,11 +82,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         }
                         
                     }
-                        // Transition to the home screen
-                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "HomeNC")
-                    self.present(controller!, animated: true)
+                    // Transition to the home screen
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "MainSB")
+                    
+                    self.present(controller, animated: true)
                 }
-               
+                
                 
                 
             }

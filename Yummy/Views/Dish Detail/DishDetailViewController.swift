@@ -30,15 +30,16 @@ class DishDetailViewController: UIViewController {
     
     @IBAction func btnPlaceOrderPressed(_ sender: Any) {
         guard let name = nameTXF.text?.trimmingCharacters(in: .whitespaces),!name.isEmpty else{
-            ProgressHUD.showError("Plase enter your Name")
+            ProgressHUD.showError("Plase enter your special request")
             return
         }
-        ProgressHUD.show("Placing order ......")
+        ProgressHUD.show("adding to cart ......")
         NetworkService.shared.placeOrder(dishId: dish.id ?? "", name: name) { (result) in
             switch result {
                 
             case .success( _):
-                ProgressHUD.showSucceed("Your order has been recived")
+                ListOrderViewController.ordersCount += 1 
+                ProgressHUD.showSucceed("Your order has been added to the cart")
                 self.nameTXF.text = ""
             case .failure(let error ):
                 ProgressHUD.showError(error.localizedDescription)

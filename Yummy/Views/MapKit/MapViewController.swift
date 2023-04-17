@@ -10,15 +10,20 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController {
+    static var region :MKCoordinateRegion?
+    var areaName = ""
+    var currentCoordinate :CLLocationCoordinate2D?
     @IBOutlet weak var mapView: MKMapView!
     var setLocationButton  = UIButton()
     let intiallcoation = CLLocation(latitude: 30.7936, longitude: 31.0047)
     let intialDistance :CLLocationDistance = 3000
     var locationButtonView: UIView!
-        var locationButton: UIButton!
+    var locationButton: UIButton!
     var cliked = true
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor =   #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
+        navigationItem.backButtonTitle = ""
         SetStartingLocation(location: intiallcoation, distance: intialDistance)
         mapView.delegate = self
         creatCurrentLocationButton()
@@ -32,14 +37,32 @@ class MapViewController: UIViewController {
         setLocationButton.addTarget(self, action: #selector(btnSetLocationAction), for: .touchUpInside)
         
         view.addSubview(setLocationButton)
-        
+   
+        }
+    @objc func btnSetLocationAction (){
+        //check location in visable
+        var cheakarea =  CheckSelectedLocation()
+        //pass data & navigate
+        if cheakarea{
+            let controller = AdressDataViewController.instantiate(storyBord: "HomeUI")
+            MapViewController.region = MKCoordinateRegion(center: currentCoordinate ?? intiallcoation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+            controller.areaName = areaName
+            navigationController?.pushViewController(controller, animated: true)
+        }else{
+            
+            callAlert()
+        }
     }
- @objc func btnSetLocationAction (){
-     let controller = AdressDataViewController.instantiate(storyBord: "HomeUI")
-     print("hhhhh")
-     navigationController?.pushViewController(controller, animated: true)
-     print("sssss")
+    func callAlert(){
+        let alertController = UIAlertController(title: "Unavailable", message: "Sorry, Yummy can't deliver to your location at this time.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { action in
+            // Handle OK button action
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+
     }
+    
     func creatChangeMapTypeButton(){
         let buttonSize: CGFloat = 25
         let buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
@@ -89,43 +112,45 @@ class MapViewController: UIViewController {
         }
     }
     func SetStartingLocation(location :CLLocation,distance:CLLocationDistance){
-            let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: distance, longitudinalMeters: distance)
-            mapView.setRegion(region, animated: true)
-            
-        }
-        
-        
+        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: distance, longitudinalMeters: distance)
+        mapView.setRegion(region, animated: true)
         
     }
+    
+    
+    
+}
 extension MapViewController :MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
         setLocationButton.isHidden = true
     }
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         setLocationButton.isHidden = false
-        getLocation(location: CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude))
-        CheckSelectedLocation()
+        currentCoordinate = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude).coordinate
+        getLocation(location:CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude) )
+        
     }
     func getLocation(location :CLLocation){
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(location) { places, error in
             guard let place = places?.first,error == nil else {return}
             if let  name = place.name {
-                print(name)
+                self.areaName = name
             }
         }
     }
-    func CheckSelectedLocation(){
+    func CheckSelectedLocation()->Bool{
         let tantaLocation = CLLocationCoordinate2D(latitude: 30.7936, longitude: 31.0047)
         let tantaRegion = CLCircularRegion(center: tantaLocation, radius: 20000, identifier: "Tanta") // Set a circular region around Tanta
         let visibleRegion = MKCoordinateRegion(center: mapView.centerCoordinate, span: mapView.region.span)
         let visibleLocation = CLLocation(latitude: visibleRegion.center.latitude, longitude: visibleRegion.center.longitude)
         
         if tantaRegion.contains(visibleLocation.coordinate) {
-            print("Yes") // User selected a location within Tanta
+            return true // User selected a location within Tanta
         } else {
-            print("No") // User selected a location outside of Tanta
+            return false // User selected a location outside of Tanta
         }
     }
+    
 }
 

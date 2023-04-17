@@ -16,7 +16,7 @@
         <!--Login View Controller-->
         <scene sceneID="g9s-TF-fzW">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="oUY-sa-eAn" customClass="LoginViewController" customModule="Yummy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="oUY-sa-eAn" customClass="LoginViewController" customModule="Yummy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iz4-0S-nQd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +141,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="Nh9-Cn-wE5">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="w4h-kp-aae" customClass="SignUpViewController" customModule="Yummy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="w4h-kp-aae" customClass="SignUpViewController" customModule="Yummy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EYa-ca-OJM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
         <!--Navigation Controller-->
         <scene sceneID="o97-oc-adZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sDt-fp-JIP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="login&amp;signup" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="sDt-fp-JIP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bhX-p0-xaa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

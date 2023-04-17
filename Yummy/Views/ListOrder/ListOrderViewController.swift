@@ -9,48 +9,35 @@ import UIKit
 import ProgressHUD
 class ListOrderViewController: UIViewController {
   
-    @IBOutlet weak var noOrdersView: CardView!
+    static var price :Int = 0
+    @IBOutlet weak var noOrdersView: UIView!
     
     @IBOutlet weak var ordersViews: CardView!
     
-    
-    var orders = [Order](){
+    static var ordersCount =  0
+     var orders = [Order](){
         didSet {
             ordersViews.isHidden = orders.isEmpty
-            listOrderTableView.isHidden = ordersViews.isHidden
             noOrdersView.isHidden = !ordersViews.isHidden
             listOrderTableView.reloadData()
+            ListOrderViewController.ordersCount = orders.count
         }
         
     }
    
     @IBOutlet weak var listOrderTableView: UITableView!
     override func viewDidLoad() {
+        navigationController?.navigationBar.tintColor =   #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
         super.viewDidLoad()
         registerCell()
         title = "Orders"
-        orders.removeAll()
+        
        
     }
-    override func viewWillAppear(_ animated: Bool) {
-        if orders.isEmpty == true {
-            noOrdersView.isHidden = false
-            ordersViews.isHidden = true
-            listOrderTableView.isHidden = true
-        }
-        else{
-            ordersViews.isHidden = false
-            listOrderTableView.isHidden = false
-            noOrdersView.isHidden = true
-        }
-    }
+
     
     
-    @IBAction func goHomeTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        tabBarController?.tabBar.isHidden = false
-        
-    }
+ 
     
   
 
@@ -62,6 +49,10 @@ class ListOrderViewController: UIViewController {
             case .success(let orders):
                 ProgressHUD.dismiss()
                self?.orders =  orders
+                ListOrderViewController.price = 0
+                for item in orders {
+                    ListOrderViewController.price += (item.dish?.calories)!
+                }
                 self?.listOrderTableView.reloadData()
             case .failure(let error):
                 ProgressHUD.showError(error.localizedDescription)
@@ -70,6 +61,10 @@ class ListOrderViewController: UIViewController {
        
     }
     
+    @IBAction func btnCheckOutPreset(_ sender: Any) {
+        let controller = MapViewController.instantiate(storyBord: "HomeUI")
+        navigationController?.pushViewController(controller, animated: true)
+    }
     func registerCell(){
         listOrderTableView.register(UINib(nibName: "DishListTableViewCell", bundle: nil), forCellReuseIdentifier: "DishListTableViewCell")
     }
@@ -91,6 +86,18 @@ extension ListOrderViewController :UITableViewDelegate,UITableViewDataSource{
         controller.dish = orders[indexPath.row].dish
         navigationController?.pushViewController(controller, animated: true)
     }
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "") { action, view, complitionHandller in
+            self.orders.remove(at: indexPath.row)
+//            self.listOrderTableView.beginUpdates()
+//            self.listOrderTableView.deleteRows(at: [indexPath], with: .fade)
+//            self.listOrderTableView.endUpdates()
+            complitionHandller(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash")!
+      
+       
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
     
 }

@@ -7,14 +7,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Satisfy-Regular.ttf">
-            <string>Satisfy-Regular</string>
-        </array>
-        <array key="Zeyada-Regular.ttf">
-            <string>Zeyada</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Notifactions-->
         <scene sceneID="MUf-lX-wAz">
@@ -35,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awh-tc-wJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3430" y="-1347"/>
+            <point key="canvasLocation" x="3056" y="-1415"/>
         </scene>
         <!--ProfileUI-->
         <scene sceneID="ff9-9n-7vp">
@@ -45,12 +37,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCX-5h-edQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4184" y="-1662"/>
+            <point key="canvasLocation" x="4027" y="-1723"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bop-6O-Lct">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="L3o-d2-VGC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainSB" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="L3o-d2-VGC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="gKT-NH-bSY">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -63,7 +55,7 @@
                     <connections>
                         <segue destination="0fB-cQ-dff" kind="relationship" relationship="viewControllers" id="ajK-YG-DYw"/>
                         <segue destination="G0g-0s-sTp" kind="relationship" relationship="viewControllers" id="IGU-V0-YPQ"/>
-                        <segue destination="zqv-pZ-2CK" kind="relationship" relationship="viewControllers" id="ahi-bL-icx"/>
+                        <segue destination="zqv-pZ-2CK" kind="relationship" relationship="viewControllers" id="bjL-vY-X6o"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYL-oZ-My4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -81,111 +73,9 @@
             </objects>
             <point key="canvasLocation" x="1972" y="-1662"/>
         </scene>
-        <!--Orders-->
-        <scene sceneID="JVq-z2-S2d">
-            <objects>
-                <viewController storyboardIdentifier="ListOrderViewController" id="GHf-QJ-7AI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fxo-6S-E4Q">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="z2P-OO-mAI" customClass="CardView" customModule="Yummy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="35" width="393" height="781"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No order" translatesAutoresizingMaskIntoConstraints="NO" id="WII-a9-0Ve">
-                                        <rect key="frame" x="0.0" y="-56" width="393" height="355"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eSh-Jk-Cle">
-                                        <rect key="frame" x="50" y="341.33333333333331" width="293" height="117"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Orders Yet " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxn-cU-gib">
-                                                <rect key="frame" x="74" y="0.0" width="145" height="37.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="26"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your chart is empty . add something from menu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1w-Yh-B1p">
-                                                <rect key="frame" x="9.3333333333333428" y="47.333333333333378" width="274.66666666666663" height="69.666666666666686"/>
-                                                <fontDescription key="fontDescription" name="Zeyada" family="Zeyada" pointSize="22"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-Sv-HhY">
-                                        <rect key="frame" x="124" y="557.33333333333337" width="145" height="62.333333333333371"/>
-                                        <color key="backgroundColor" red="0.58178478479999995" green="0.091433934869999997" blue="0.18514347079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Go Home">
-                                            <fontDescription key="titleFontDescription" name="Satisfy-Regular" family="Satisfy" pointSize="22"/>
-                                        </buttonConfiguration>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="btnCornerRadius">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="goHomeTapped:" destination="NmS-r6-fsg" eventType="touchUpInside" id="4lx-fN-Ava"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="WII-a9-0Ve" secondAttribute="trailing" id="6ZZ-xB-60J"/>
-                                    <constraint firstItem="WII-a9-0Ve" firstAttribute="height" secondItem="z2P-OO-mAI" secondAttribute="height" multiplier="0.454545" id="7Hy-7y-tbQ"/>
-                                    <constraint firstItem="c0o-Sv-HhY" firstAttribute="top" secondItem="eSh-Jk-Cle" secondAttribute="bottom" constant="98.999999999999943" id="HuW-k9-9Xs"/>
-                                    <constraint firstItem="eSh-Jk-Cle" firstAttribute="top" secondItem="WII-a9-0Ve" secondAttribute="bottom" constant="42.333333333333314" id="IS1-Kp-J4k"/>
-                                    <constraint firstItem="WII-a9-0Ve" firstAttribute="top" secondItem="z2P-OO-mAI" secondAttribute="top" constant="-56" id="TVS-Ew-e4z"/>
-                                    <constraint firstItem="c0o-Sv-HhY" firstAttribute="leading" secondItem="Dxn-cU-gib" secondAttribute="leading" id="WnV-g6-glj"/>
-                                    <constraint firstItem="c0o-Sv-HhY" firstAttribute="trailing" secondItem="Dxn-cU-gib" secondAttribute="trailing" id="Z1M-0F-U7l"/>
-                                    <constraint firstAttribute="trailing" secondItem="eSh-Jk-Cle" secondAttribute="trailing" constant="50" id="ZXm-tl-f0c"/>
-                                    <constraint firstItem="eSh-Jk-Cle" firstAttribute="leading" secondItem="z2P-OO-mAI" secondAttribute="leading" constant="50" id="ht7-ea-Dmy"/>
-                                    <constraint firstItem="c0o-Sv-HhY" firstAttribute="height" secondItem="z2P-OO-mAI" secondAttribute="height" multiplier="0.0798122" id="sPF-4g-8DI"/>
-                                    <constraint firstItem="WII-a9-0Ve" firstAttribute="leading" secondItem="z2P-OO-mAI" secondAttribute="leading" id="upC-lX-nSt"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qLU-4k-g5a">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="GHf-QJ-7AI" id="M7W-EE-ziK"/>
-                                    <outlet property="delegate" destination="GHf-QJ-7AI" id="SYB-o0-k3L"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bWv-WG-p3i"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="bWv-WG-p3i" firstAttribute="trailing" secondItem="qLU-4k-g5a" secondAttribute="trailing" id="1O7-lf-uKC"/>
-                            <constraint firstItem="qLU-4k-g5a" firstAttribute="leading" secondItem="bWv-WG-p3i" secondAttribute="leading" id="YWW-gk-3Jn"/>
-                            <constraint firstItem="bWv-WG-p3i" firstAttribute="bottom" secondItem="qLU-4k-g5a" secondAttribute="bottom" id="hPR-M9-inT"/>
-                            <constraint firstItem="qLU-4k-g5a" firstAttribute="top" secondItem="bWv-WG-p3i" secondAttribute="top" id="qKI-RF-dSH"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Orders" image="cart.fill" catalog="system" id="BjB-Sy-BCa"/>
-                    <navigationItem key="navigationItem" id="f7y-T0-bej"/>
-                    <connections>
-                        <outlet property="listOrderTableView" destination="qLU-4k-g5a" id="rpe-sV-L0k"/>
-                        <outlet property="noOrdersView" destination="z2P-OO-mAI" id="BRu-5a-w8m"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DhZ-kf-8H2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="NmS-r6-fsg" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="2718" y="-1392"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="No order" width="128.33332824707031" height="80.333335876464844"/>
         <image name="bell" catalog="system" width="125" height="128"/>
-        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

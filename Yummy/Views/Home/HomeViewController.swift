@@ -40,14 +40,11 @@ class HomeViewController: UIViewController {
               
                 ProgressHUD.dismiss()
                 self?.arrCategory = allDishes.categories ?? []
-                print(self?.arrCategory ?? [])
+                
                 self?.categoryCollectionView.reloadData()
                 self?.arrpopulars = allDishes.populars ?? []
-                print(self?.arrpopulars ?? [])
                 self?.popularCollectionView.reloadData()
-               
                 self?.arrspecials = allDishes.specials ?? []
-                print(self?.arrspecials ?? [])
                 self?.chefCollectionView.reloadData()
                
                 
@@ -67,7 +64,7 @@ class HomeViewController: UIViewController {
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         button.layer.cornerRadius = button.frame.width / 2.0
-        button.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9960784314, blue: 0.9960784314, alpha: 1)
+        //button.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9960784314, blue: 0.9960784314, alpha: 1)
         let color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.setImage(UIImage(systemName: "cart.fill")!.withTintColor(color, renderingMode: .alwaysOriginal), for: .normal)
         let badgeLabel = UILabel(frame: CGRect(x: button.frame.width - 18, y: 25, width: 20, height: 20))
@@ -78,7 +75,7 @@ class HomeViewController: UIViewController {
         badgeLabel.textColor = #colorLiteral(red: 0.9960784314, green: 0.9960784314, blue: 0.9960784314, alpha: 1)
         let customFont = UIFont(name: "Almarai-Bold", size: 14.0)!
         badgeLabel.font = customFont
-        badgeLabel.text = "10"
+        badgeLabel.text = ("\(ListOrderViewController.ordersCount)")
         button.addSubview(badgeLabel)
         button.addTarget(self, action: #selector(ordersButtonTapped), for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: button)
