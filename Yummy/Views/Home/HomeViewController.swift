@@ -8,7 +8,7 @@
 import UIKit
 import ProgressHUD
 class HomeViewController: UIViewController {
-    
+   
     @IBOutlet weak var chefCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
@@ -40,11 +40,14 @@ class HomeViewController: UIViewController {
               
                 ProgressHUD.dismiss()
                 self?.arrCategory = allDishes.categories ?? []
-                
+                self?.arrCategory  = Array((self?.arrCategory.reversed())!)
                 self?.categoryCollectionView.reloadData()
                 self?.arrpopulars = allDishes.populars ?? []
+                self?.arrpopulars  = Array((self?.arrpopulars.reversed())!)
                 self?.popularCollectionView.reloadData()
+                
                 self?.arrspecials = allDishes.specials ?? []
+                
                 self?.chefCollectionView.reloadData()
                
                 
@@ -53,18 +56,21 @@ class HomeViewController: UIViewController {
                 ProgressHUD.showError(error.localizedDescription)
             }
         }
-
+        if  SignUpViewController.newAcount ==  true  {
+            LocalNotifaction.firstCouponNotifaction(userName: SignUpViewController.userAuth)
+            SignUpViewController.newAcount = false
+        }
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        createBarButtonBadge(badge: 10)
+        createBarButtonBadge()
         tabBarController?.tabBar.isHidden = false
     }
-    func createBarButtonBadge(badge :Int){
+    func createBarButtonBadge(){
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         button.layer.cornerRadius = button.frame.width / 2.0
-        //button.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9960784314, blue: 0.9960784314, alpha: 1)
+        
         let color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.setImage(UIImage(systemName: "cart.fill")!.withTintColor(color, renderingMode: .alwaysOriginal), for: .normal)
         let badgeLabel = UILabel(frame: CGRect(x: button.frame.width - 18, y: 25, width: 20, height: 20))
@@ -76,7 +82,10 @@ class HomeViewController: UIViewController {
         let customFont = UIFont(name: "Almarai-Bold", size: 14.0)!
         badgeLabel.font = customFont
         badgeLabel.text = ("\(ListOrderViewController.ordersCount)")
-        button.addSubview(badgeLabel)
+        if ListOrderViewController.ordersCount != 0 {
+            button.addSubview(badgeLabel)
+        }
+      
         button.addTarget(self, action: #selector(ordersButtonTapped), for: .touchUpInside)
         let barButtonItem = UIBarButtonItem(customView: button)
         navigationItem.rightBarButtonItem = barButtonItem

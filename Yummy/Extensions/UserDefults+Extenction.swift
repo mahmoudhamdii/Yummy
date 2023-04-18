@@ -9,6 +9,7 @@ import Foundation
 extension UserDefaults {
     private enum UserDefultsKeys :String {
         case hasOnboarded
+        case hasAuthorization
     }
     var hasOnboarded :Bool {
         get{
@@ -16,6 +17,14 @@ extension UserDefaults {
         }
         set {
             setValue(newValue, forKey: UserDefultsKeys.hasOnboarded.rawValue)
+        }
+    }
+    var hasAuthorization :Bool {
+        get{
+            bool(forKey: UserDefultsKeys.hasAuthorization.rawValue)
+        }
+        set{
+            setValue(newValue, forKey: UserDefultsKeys.hasAuthorization.rawValue)
         }
     }
 }

@@ -10,14 +10,15 @@ import FirebaseAuth
 import ProgressHUD
 import Firebase
 class SignUpViewController: UIViewController, UITextFieldDelegate {
-    
+    static var userAuth = ""
+    static  var newAcount = true
     @IBOutlet weak var ConfirmPasswordTXF: UITextField!
     @IBOutlet weak var paswordTXF: UITextField!
     @IBOutlet weak var userNameTXF: UITextField!
     @IBOutlet weak var emailTXF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.hidesBackButton = true
         Utalities.addTXFImage(textField: userNameTXF, img: UIImage(systemName: "person")!)
         Utalities.addTXFImage(textField: paswordTXF, img: UIImage(systemName: "lock")!)
         Utalities.addTXFImage(textField: ConfirmPasswordTXF, img: UIImage(systemName: "lock")!)
@@ -26,6 +27,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func btnSigninTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     // Check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
     func validateFields() ->String? {
         
@@ -83,8 +87,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         
                     }
                     // Transition to the home screen
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let controller = storyboard.instantiateViewController(withIdentifier: "MainSB")
+                    SignUpViewController.newAcount = true
+                    SignUpViewController.userAuth = self.userNameTXF.text!
+                    UserDefaults.standard.hasAuthorization = true
+                    let storyboard = UIStoryboard(name: "HomeUI", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "HomeNC")
                     
                     self.present(controller, animated: true)
                 }

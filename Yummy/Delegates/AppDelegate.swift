@@ -20,16 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             .requestAuthorization(options: [.sound,.alert,.badge]) { approve, error in
                 if approve {
                     print("Approve")
-                        LocalNotifaction.firstCouponNotifaction(userName: "Mahmoud")
+                       
                     
                  
                 }else{
                     ProgressHUD.showError(error?.localizedDescription)
                 }
             }
-//  UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//        UINavigationBar.appearance().shadowImage = UIImage()
-//        UINavigationBar.appearance().tintColor = .black
+
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         FirebaseApp.configure()
@@ -39,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         completionHandler([.banner,.sound])
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        //go to copoun controller
         print("Recived")
     }
 

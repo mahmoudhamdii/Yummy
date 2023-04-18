@@ -17,8 +17,10 @@ import ProgressHUD
     override func viewDidLoad() {
         super.viewDidLoad()
         Utalities.addTXFImage(textField: userNameTXF, img: UIImage(systemName: "person")!)
-        Utalities.addTXFImage(textField: passwordTXF, img: UIImage(systemName: "envelope")!)
+        Utalities.addTXFImage(textField: passwordTXF, img: UIImage(systemName: "lock")!)
+        passwordTXF.isSecureTextEntry = true
     }
+    
     
    
     
@@ -37,6 +39,7 @@ import ProgressHUD
                     ProgressHUD.showError(error?.localizedDescription)
                     //can't sign in
                 }else{
+                    UserDefaults.standard.hasAuthorization = true
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let controller = storyboard.instantiateViewController(withIdentifier: "MainSB")
                     

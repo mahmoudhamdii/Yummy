@@ -18,8 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
         var controller :UIViewController!
         if UserDefaults.standard.hasOnboarded {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            controller = storyBoard.instantiateViewController(withIdentifier: "MainSB")
+            //cheak auth
+            if UserDefaults.standard.hasAuthorization {
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                controller = storyBoard.instantiateViewController(withIdentifier: "MainSB")
+            }else{
+              
+                let storyBoard = UIStoryboard(name: "UserAuthorizationUI", bundle: nil)
+                controller = storyBoard.instantiateViewController(withIdentifier: "login&signup")
+            }
+            
             
         }
         else{
