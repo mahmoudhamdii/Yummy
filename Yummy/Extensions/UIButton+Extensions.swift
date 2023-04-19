@@ -16,5 +16,11 @@ extension UIButton {
             self.layer.cornerRadius = newValue
         }
     }
-}
+    
+        var addBorder: Void {
+            layer.borderWidth = 1
+            layer.borderColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1).cgColor
+        }
+    }
+
 

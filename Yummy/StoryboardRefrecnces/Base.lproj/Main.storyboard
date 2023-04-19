@@ -23,7 +23,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notifactions" image="bell" catalog="system" badgeValue="3" id="jKD-xI-Ni8"/>
+                    <tabBarItem key="tabBarItem" title="Notifactions" image="bell" catalog="system" id="jKD-xI-Ni8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awh-tc-wJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

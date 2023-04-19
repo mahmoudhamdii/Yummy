@@ -29,6 +29,13 @@ class ListOrderViewController: UIViewController {
     override func viewDidLoad() {
         navigationController?.navigationBar.tintColor =   #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
         super.viewDidLoad()
+        if ListOrderViewController.ordersCount == 0 {
+            ordersViews.isHidden = true
+            noOrdersView.isHidden = false
+        }else{
+            ordersViews.isHidden = false
+            noOrdersView.isHidden = true
+        }
         registerCell()
         title = "Orders"
         

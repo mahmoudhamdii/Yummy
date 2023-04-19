@@ -16,12 +16,17 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupsSegmentControll()
+        
+        languageControl.setup()
+        languageControl.selectedSegmentTitle
+        btnAddCoupon.addBorder
         ordersLable.text = "\(ProfileViewController.ordersCount) Orders"
-        addCouponSetup()
-        // Do any additional setup after loading the view.
-    }
+       
+            }
     override func viewWillAppear(_ animated: Bool) {
+        if UserDefaults.standard.hasEnableDarkMode == true {
+            displayModeController.isOn = true 
+        }
         if ProfileViewController.ordersCount == 1 {
             ordersLable.text = "\(ProfileViewController.ordersCount) Order"
         }else{
@@ -29,10 +34,19 @@ class ProfileViewController: UIViewController {
         }
        
     }
-    func addCouponSetup(){
-        btnAddCoupon.layer.borderWidth = 1
-        btnAddCoupon.layer.borderColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1).cgColor
+    
+    @IBAction func displayModeChanged(_ sender: UISwitch) {
+        if sender.isOn {
+                // Set the app-wide appearance to dark mode
+            UserDefaults.standard.hasEnableDarkMode = true
+                UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .dark
+            } else {
+                UserDefaults.standard.hasEnableDarkMode = false
+                // Set the app-wide appearance to light mode
+                UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
+            }
     }
+ 
     
     @IBAction func btnAddCouponTapped(_ sender: Any) {
     }
@@ -41,14 +55,6 @@ class ProfileViewController: UIViewController {
     
     @IBAction func btnLogoutTapped(_ sender: Any) {
     }
-   func  setupsSegmentControll(){
-       // Create a dictionary to hold the attributes for the segmented control title
-       var titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-       languageControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
-       languageControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
-       // Set the title text attributes for the normal state of the segmented control
-        titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)]
-       languageControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
-    }
+
 
 }

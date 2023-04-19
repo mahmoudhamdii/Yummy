@@ -23,4 +23,13 @@ extension UIView {
         view.layer.borderColor = UIColor.white.cgColor
        
     }
+    static func fadeInViews(views: [UIView], duration: TimeInterval = 0.5, delay: TimeInterval = 0.0) {
+        for view in views {
+            view.alpha = 0.0
+            UIView.animate(withDuration: duration, delay: delay, options: [.curveEaseInOut], animations: {
+                view.alpha = 1.0
+            }, completion: nil)
+        }
+    }
+    
 }

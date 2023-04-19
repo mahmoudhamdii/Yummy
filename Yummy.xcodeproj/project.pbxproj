@@ -19,14 +19,13 @@
 		3631797829A97359002C421D /* DishPortraitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3631797629A97359002C421D /* DishPortraitCollectionViewCell.xib */; };
 		3631797A29A976FD002C421D /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631797929A976FD002C421D /* Dish.swift */; };
 		36387CB129C37A15004F489F /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36387CB029C37A15004F489F /* CheckOutViewController.swift */; };
-		36559D5729B8BEEE00E976B9 /* Utalities+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36559D5629B8BEEE00E976B9 /* Utalities+Extensions.swift */; };
+		364C570E29EFB99D00712C55 /* SegmentControll+Extenction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C570D29EFB99D00712C55 /* SegmentControll+Extenction.swift */; };
 		3655E38C29BA3C9A00B7BB75 /* UserAuthorizationUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3655E38B29BA3C9A00B7BB75 /* UserAuthorizationUI.storyboard */; };
 		3655E38E29BA3D9400B7BB75 /* HomeUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3655E38D29BA3D9400B7BB75 /* HomeUI.storyboard */; };
 		3655E39029BA3FA800B7BB75 /* ProfileUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3655E38F29BA3FA800B7BB75 /* ProfileUI.storyboard */; };
-		3655E39429BA43A700B7BB75 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655E39229BA43A700B7BB75 /* ProfileTableViewCell.swift */; };
-		3655E39529BA43A700B7BB75 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3655E39329BA43A700B7BB75 /* ProfileTableViewCell.xib */; };
 		3657109D29B9D3C900730B00 /* TextFieldValdiator+Exensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3657109C29B9D3C900730B00 /* TextFieldValdiator+Exensions.swift */; };
 		3657109F29BA3AB600730B00 /* OnBordingUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3657109E29BA3AB600730B00 /* OnBordingUI.storyboard */; };
+		36658E1329EEB026004F0FDA /* app-intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 36658E1229EEB026004F0FDA /* app-intro.mp4 */; };
 		367E642B29B8E8480041E207 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 367E642A29B8E8480041E207 /* GoogleService-Info.plist */; };
 		368418CA29A7D06300E7A36B /* Zeyada-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368418C929A7D06300E7A36B /* Zeyada-Regular.ttf */; };
 		368418CC29A7D29600E7A36B /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368418CB29A7D29600E7A36B /* Satisfy-Regular.ttf */; };
@@ -86,14 +85,13 @@
 		3631797629A97359002C421D /* DishPortraitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPortraitCollectionViewCell.xib; sourceTree = "<group>"; };
 		3631797929A976FD002C421D /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		36387CB029C37A15004F489F /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
-		36559D5629B8BEEE00E976B9 /* Utalities+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utalities+Extensions.swift"; sourceTree = "<group>"; };
+		364C570D29EFB99D00712C55 /* SegmentControll+Extenction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentControll+Extenction.swift"; sourceTree = "<group>"; };
 		3655E38B29BA3C9A00B7BB75 /* UserAuthorizationUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserAuthorizationUI.storyboard; sourceTree = "<group>"; };
 		3655E38D29BA3D9400B7BB75 /* HomeUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeUI.storyboard; sourceTree = "<group>"; };
 		3655E38F29BA3FA800B7BB75 /* ProfileUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileUI.storyboard; sourceTree = "<group>"; };
-		3655E39229BA43A700B7BB75 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
-		3655E39329BA43A700B7BB75 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		3657109C29B9D3C900730B00 /* TextFieldValdiator+Exensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldValdiator+Exensions.swift"; sourceTree = "<group>"; };
 		3657109E29BA3AB600730B00 /* OnBordingUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBordingUI.storyboard; sourceTree = "<group>"; };
+		36658E1229EEB026004F0FDA /* app-intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "app-intro.mp4"; sourceTree = "<group>"; };
 		367E642A29B8E8480041E207 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		368418C929A7D06300E7A36B /* Zeyada-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Zeyada-Regular.ttf"; sourceTree = "<group>"; };
 		368418CB29A7D29600E7A36B /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
@@ -204,15 +202,6 @@
 			path = CheckOut;
 			sourceTree = "<group>";
 		};
-		3655E39129BA434A00B7BB75 /* ProfieTableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				3655E39229BA43A700B7BB75 /* ProfileTableViewCell.swift */,
-				3655E39329BA43A700B7BB75 /* ProfileTableViewCell.xib */,
-			);
-			path = ProfieTableViewCells;
-			sourceTree = "<group>";
-		};
 		3655E39629BA4DCE00B7BB75 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +213,6 @@
 		367BB83829AAC05F009C37D9 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				3655E39129BA434A00B7BB75 /* ProfieTableViewCells */,
 				367BB83929AAC093009C37D9 /* DishlistTableViewCell */,
 			);
 			path = TableViewCells;
@@ -237,6 +225,18 @@
 				3609DBB029AAF0ED009CE5C7 /* DishListTableViewCell.xib */,
 			);
 			path = DishlistTableViewCell;
+			sourceTree = "<group>";
+		};
+		3680141029EF9BFF008D8575 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				36AAD2A729AC34C6003E05B7 /* NetworkService.swift */,
+				36AAD2A929AC364E003E05B7 /* Route.swift */,
+				36CDFF8629ACE6FE00FC6B6B /* Method.swift */,
+				36CDFF8829AD35F300FC6B6B /* AppError.swift */,
+				36CDFF8A29AD6F0700FC6B6B /* ApiResponse.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		368418C829A7D03100E7A36B /* Fonts */ = {
@@ -271,18 +271,18 @@
 		368418CE29A7D69B00E7A36B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				369AB23129EB08BD007C9A7F /* OTP */,
-				3618C72A29E16F180089EB48 /* Adress Data */,
-				369BE15A29DBF5B800A60675 /* MapKit */,
-				36387CB229C37A2C004F489F /* CheckOut */,
-				3655E39629BA4DCE00B7BB75 /* Profile */,
-				36BD9A8E29AEF8A800B219F1 /* SignUp */,
-				36BD9A8D29AEF88E00B219F1 /* Login */,
+				368418CF29A7D6B600E7A36B /* Onboarding */,
 				3609DBB529AB0919009CE5C7 /* ListOrder */,
 				3609DBAC29AAC7A1009CE5C7 /* ListDishes */,
 				3685397B29AA62B1002CC59C /* Dish Detail */,
 				3695C50D29A86498005C828B /* Home */,
-				368418CF29A7D6B600E7A36B /* Onboarding */,
+				36BD9A8E29AEF8A800B219F1 /* SignUp */,
+				36BD9A8D29AEF88E00B219F1 /* Login */,
+				3655E39629BA4DCE00B7BB75 /* Profile */,
+				36387CB229C37A2C004F489F /* CheckOut */,
+				369BE15A29DBF5B800A60675 /* MapKit */,
+				3618C72A29E16F180089EB48 /* Adress Data */,
+				369AB23129EB08BD007C9A7F /* OTP */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,13 +398,13 @@
 		36A3FC2629A7DCE200CBE18B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				36559D5629B8BEEE00E976B9 /* Utalities+Extensions.swift */,
 				36A3FC2729A7DD2800CBE18B /* UIViewExtensions.swift */,
 				36E780BE29A919DE00DD5C79 /* String+Extensions.swift */,
 				3685397E29AA7447002CC59C /* UIViewController+Extenction.swift */,
 				36BD9A8B29AEC9D200B219F1 /* UserDefults+Extenction.swift */,
 				3657109C29B9D3C900730B00 /* TextFieldValdiator+Exensions.swift */,
 				368A5B7B29BF417B008BA902 /* UIButton+Extensions.swift */,
+				364C570D29EFB99D00712C55 /* SegmentControll+Extenction.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,11 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				368B271629C04B63004EB1B6 /* Notifaction */,
-				36AAD2A729AC34C6003E05B7 /* NetworkService.swift */,
-				36AAD2A929AC364E003E05B7 /* Route.swift */,
-				36CDFF8629ACE6FE00FC6B6B /* Method.swift */,
-				36CDFF8829AD35F300FC6B6B /* AppError.swift */,
-				36CDFF8A29AD6F0700FC6B6B /* ApiResponse.swift */,
+				3680141029EF9BFF008D8575 /* Networking */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -486,6 +482,7 @@
 				3692E0D529B606080037296E /* Delegates */,
 				36931F1D29B6C63E00451B57 /* StoryboardRefrecnces */,
 				36EE741E29A721EB00B365FB /* Assets.xcassets */,
+				36658E1229EEB026004F0FDA /* app-intro.mp4 */,
 				36EE742329A721EB00B365FB /* Info.plist */,
 				367E642A29B8E8480041E207 /* GoogleService-Info.plist */,
 			);
@@ -565,7 +562,6 @@
 				36BB996329B61948001640C2 /* Almarai-Light.ttf in Resources */,
 				36EE742229A721EB00B365FB /* LaunchScreen.storyboard in Resources */,
 				3655E38C29BA3C9A00B7BB75 /* UserAuthorizationUI.storyboard in Resources */,
-				3655E39529BA43A700B7BB75 /* ProfileTableViewCell.xib in Resources */,
 				3609DBB229AAF0ED009CE5C7 /* DishListTableViewCell.xib in Resources */,
 				3655E38E29BA3D9400B7BB75 /* HomeUI.storyboard in Resources */,
 				36EE741F29A721EB00B365FB /* Assets.xcassets in Resources */,
@@ -573,6 +569,7 @@
 				3618884929E7F2F200053663 /* SourceSerifPro-Regular.ttf in Resources */,
 				3631797829A97359002C421D /* DishPortraitCollectionViewCell.xib in Resources */,
 				36BB996229B61948001640C2 /* Almarai-Bold.ttf in Resources */,
+				36658E1329EEB026004F0FDA /* app-intro.mp4 in Resources */,
 				36BB996129B61948001640C2 /* Almarai-Regular.ttf in Resources */,
 				368418CC29A7D29600E7A36B /* Satisfy-Regular.ttf in Resources */,
 				3655E39029BA3FA800B7BB75 /* ProfileUI.storyboard in Resources */,
@@ -642,8 +639,8 @@
 				36EE741629A721E800B365FB /* AppDelegate.swift in Sources */,
 				36EE741829A721E800B365FB /* SceneDelegate.swift in Sources */,
 				36A3FC2829A7DD2800CBE18B /* UIViewExtensions.swift in Sources */,
+				364C570E29EFB99D00712C55 /* SegmentControll+Extenction.swift in Sources */,
 				36CDFF8D29AD8DB400FC6B6B /* AllDishes.swift in Sources */,
-				3655E39429BA43A700B7BB75 /* ProfileTableViewCell.swift in Sources */,
 				3685397D29AA62DD002CC59C /* DishDetailViewController.swift in Sources */,
 				36387CB129C37A15004F489F /* CheckOutViewController.swift in Sources */,
 				369AB23329EB08DE007C9A7F /* OTPViewController.swift in Sources */,
@@ -663,7 +660,6 @@
 				36AAD2AA29AC364E003E05B7 /* Route.swift in Sources */,
 				36AAD2A829AC34C6003E05B7 /* NetworkService.swift in Sources */,
 				36E780BD29A9112C00DD5C79 /* DishCategory.swift in Sources */,
-				36559D5729B8BEEE00E976B9 /* Utalities+Extensions.swift in Sources */,
 				36A2095829BAEB82001C4680 /* User.swift in Sources */,
 				368B271929C04B8E004EB1B6 /* Local Notifaction.swift in Sources */,
 				36E780C229A9411400DD5C79 /* CardView.swift in Sources */,

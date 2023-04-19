@@ -18,7 +18,7 @@ class DishDetailViewController: UIViewController {
     @IBOutlet weak var dishImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameTXF.delegate = self
       populateView()
     }
     private func populateView (){
@@ -48,4 +48,10 @@ class DishDetailViewController: UIViewController {
     }
     
     
+}
+extension DishDetailViewController :UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        btnPlaceOrderPressed(UIButton.self)
+        return true
+        }
 }

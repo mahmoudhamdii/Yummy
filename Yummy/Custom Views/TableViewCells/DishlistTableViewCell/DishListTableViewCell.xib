@@ -3,8 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -50,7 +50,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="collectionBackround"/>
                         <constraints>
                             <constraint firstItem="g34-jf-aaL" firstAttribute="leading" secondItem="rOH-7j-jfa" secondAttribute="leading" constant="16" id="4fB-n6-PU1"/>
                             <constraint firstAttribute="trailing" secondItem="pQr-CJ-phK" secondAttribute="trailing" constant="16" id="60n-hY-ldj"/>
@@ -81,8 +81,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
+        <namedColor name="collectionBackround">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        </namedColor>
     </resources>
 </document>

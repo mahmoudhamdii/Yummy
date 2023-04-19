@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +32,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE9-eM-vfQ">
                                                 <rect key="frame" x="42.999999999999993" y="16.666666666666657" width="77.333333333333314" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="Cart"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lzh-hM-8AD">
@@ -47,7 +48,7 @@
                                                 <color key="selectedSegmentTintColor" red="0.58178478479999995" green="0.091433934869999997" blue="0.18514347079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </segmentedControl>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="collectionBackround"/>
                                         <constraints>
                                             <constraint firstItem="lzh-hM-8AD" firstAttribute="centerY" secondItem="IWw-xB-S0F" secondAttribute="centerY" id="Jcl-Sy-uiD"/>
                                             <constraint firstAttribute="trailing" secondItem="lzh-hM-8AD" secondAttribute="trailing" constant="15" id="RKw-If-qPg"/>
@@ -75,9 +76,9 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lQ-Jb-2Dl">
                                                 <rect key="frame" x="43" y="16.666666666666657" width="141" height="20.333333333333329"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="Cart"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFi-fA-mZW">
@@ -87,7 +88,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="collectionBackround"/>
                                         <constraints>
                                             <constraint firstItem="5Gb-Pq-psj" firstAttribute="centerY" secondItem="sZ0-CV-V32" secondAttribute="centerY" id="3Vq-LD-nEz"/>
                                             <constraint firstItem="5Gb-Pq-psj" firstAttribute="leading" secondItem="sZ0-CV-V32" secondAttribute="leading" constant="8" id="EWR-rT-xdS"/>
@@ -113,37 +114,25 @@
                                                     <constraint firstAttribute="width" secondItem="nZO-q5-MWv" secondAttribute="height" multiplier="1:1" id="QIa-GZ-tey"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Addresses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQ8-46-fc0">
-                                                <rect key="frame" x="43" y="16.666666666666629" width="134.66666666666666" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yp2-i4-7ei">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="53.333333333333336"/>
-                                                <color key="tintColor" red="0.58178478479999995" green="0.091433934869999997" blue="0.18514347079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FL-Yh-wGq">
+                                                <rect key="frame" x="43" y="0.0" width="310" height="53.333333333333336"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="Cart"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="btnCornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="btnLocationsTapped:" destination="NeD-wd-9h2" eventType="touchUpInside" id="dba-ah-KRz"/>
-                                                </connections>
+                                                <buttonConfiguration key="configuration" style="plain" title="Saved Addresses">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                                </buttonConfiguration>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="collectionBackround"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Yp2-i4-7ei" secondAttribute="trailing" id="64A-PV-H3j"/>
-                                            <constraint firstItem="wQ8-46-fc0" firstAttribute="leading" secondItem="nZO-q5-MWv" secondAttribute="trailing" constant="15" id="Ird-qs-Tf9"/>
+                                            <constraint firstAttribute="bottom" secondItem="0FL-Yh-wGq" secondAttribute="bottom" id="MR3-IG-YuW"/>
                                             <constraint firstItem="nZO-q5-MWv" firstAttribute="centerY" secondItem="qfm-cf-kcA" secondAttribute="centerY" id="PdD-Xj-h1D"/>
                                             <constraint firstItem="nZO-q5-MWv" firstAttribute="leading" secondItem="qfm-cf-kcA" secondAttribute="leading" constant="8" id="TNE-2k-9CH"/>
-                                            <constraint firstAttribute="bottom" secondItem="Yp2-i4-7ei" secondAttribute="bottom" id="b9r-ub-A8Y"/>
-                                            <constraint firstItem="Yp2-i4-7ei" firstAttribute="leading" secondItem="qfm-cf-kcA" secondAttribute="leading" id="fdz-Gh-2vb"/>
-                                            <constraint firstItem="wQ8-46-fc0" firstAttribute="centerY" secondItem="qfm-cf-kcA" secondAttribute="centerY" id="yOs-rn-5xh"/>
-                                            <constraint firstItem="Yp2-i4-7ei" firstAttribute="top" secondItem="qfm-cf-kcA" secondAttribute="top" id="zcw-9i-3a4"/>
+                                            <constraint firstItem="0FL-Yh-wGq" firstAttribute="centerY" secondItem="qfm-cf-kcA" secondAttribute="centerY" id="Y8c-W6-ZJD"/>
+                                            <constraint firstAttribute="trailing" secondItem="0FL-Yh-wGq" secondAttribute="trailing" id="gTT-Eh-21J"/>
+                                            <constraint firstItem="0FL-Yh-wGq" firstAttribute="leading" secondItem="nZO-q5-MWv" secondAttribute="trailing" constant="15" id="wUP-kF-pNX"/>
+                                            <constraint firstItem="0FL-Yh-wGq" firstAttribute="top" secondItem="qfm-cf-kcA" secondAttribute="top" id="wjX-Dm-shs"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -165,7 +154,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coupons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7Q-ru-eoN">
                                                 <rect key="frame" x="43" y="16.666666666666686" width="70" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="Cart"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-ha-iaP">
@@ -177,14 +166,14 @@
                                                 <color key="tintColor" red="0.58178478479999995" green="0.091433934869999997" blue="0.18514347079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="+ ADD COUPON">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="10"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="11"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="btnAddCouponTapped:" destination="NeD-wd-9h2" eventType="touchUpInside" id="3Es-bA-Ud4"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="collectionBackround"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="YhT-ha-iaP" secondAttribute="trailing" constant="15" id="09S-fE-RqE"/>
                                             <constraint firstItem="1rd-hn-eyu" firstAttribute="leading" secondItem="YNw-77-sue" secondAttribute="leading" constant="8" id="IaT-2a-bQt"/>
@@ -213,7 +202,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opr-XT-SrS">
                                                 <rect key="frame" x="42.999999999999993" y="16.666666666666686" width="85.333333333333314" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="Cart"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CSf-0d-V5B">
@@ -222,9 +211,12 @@
                                                     <constraint firstAttribute="width" constant="60" id="QKA-yU-7Q6"/>
                                                 </constraints>
                                                 <color key="onTintColor" red="0.58178478479999995" green="0.091433934869999997" blue="0.18514347079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="displayModeChanged:" destination="NeD-wd-9h2" eventType="valueChanged" id="6ps-ZU-CCx"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="collectionBackround"/>
                                         <constraints>
                                             <constraint firstItem="tb5-1o-bq3" firstAttribute="centerY" secondItem="juU-YB-bTt" secondAttribute="centerY" id="1GK-cq-fST"/>
                                             <constraint firstItem="Opr-XT-SrS" firstAttribute="leading" secondItem="tb5-1o-bq3" secondAttribute="trailing" constant="15" id="9pB-VM-ogh"/>
@@ -250,30 +242,23 @@
                                                     <constraint firstAttribute="height" constant="20" id="yVv-ob-Xvb"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCU-DN-Y6l">
-                                                <rect key="frame" x="43" y="16.666666666666629" width="54.666666666666657" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqE-Uh-Dk0">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="53.333333333333336"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-lc-rDP">
+                                                <rect key="frame" x="43" y="0.0" width="310" height="53.333333333333336"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="Cart"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="btnLogoutTapped:" destination="NeD-wd-9h2" eventType="touchUpInside" id="4hY-gC-2sd"/>
-                                                </connections>
+                                                <buttonConfiguration key="configuration" style="plain" title="Logout">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                                </buttonConfiguration>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="collectionBackround"/>
                                         <constraints>
-                                            <constraint firstItem="PCU-DN-Y6l" firstAttribute="leading" secondItem="Q8J-Fy-abn" secondAttribute="trailing" constant="15" id="02g-PW-hAq"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z8O-lc-rDP" secondAttribute="bottom" id="0NB-Qj-2Gd"/>
                                             <constraint firstItem="Q8J-Fy-abn" firstAttribute="leading" secondItem="JVG-TQ-7Gw" secondAttribute="leading" constant="8" id="37e-oJ-6Gj"/>
-                                            <constraint firstItem="PCU-DN-Y6l" firstAttribute="centerY" secondItem="JVG-TQ-7Gw" secondAttribute="centerY" id="5w2-6B-58F"/>
-                                            <constraint firstAttribute="trailing" secondItem="XqE-Uh-Dk0" secondAttribute="trailing" id="7S3-9X-6gy"/>
-                                            <constraint firstItem="XqE-Uh-Dk0" firstAttribute="leading" secondItem="JVG-TQ-7Gw" secondAttribute="leading" id="b2c-Yc-Oxo"/>
-                                            <constraint firstAttribute="bottom" secondItem="XqE-Uh-Dk0" secondAttribute="bottom" id="kf9-Pr-TQg"/>
-                                            <constraint firstItem="XqE-Uh-Dk0" firstAttribute="top" secondItem="JVG-TQ-7Gw" secondAttribute="top" id="liP-33-1MH"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z8O-lc-rDP" secondAttribute="trailing" id="9z0-z9-6EB"/>
+                                            <constraint firstItem="Z8O-lc-rDP" firstAttribute="top" secondItem="JVG-TQ-7Gw" secondAttribute="top" id="FyA-x1-UR7"/>
+                                            <constraint firstItem="Z8O-lc-rDP" firstAttribute="leading" secondItem="Q8J-Fy-abn" secondAttribute="trailing" constant="15" id="brP-GK-S9j"/>
                                             <constraint firstItem="Q8J-Fy-abn" firstAttribute="centerY" secondItem="JVG-TQ-7Gw" secondAttribute="centerY" id="s5d-KM-GNG"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -322,7 +307,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zQS-cQ-xge"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="eKS-Gv-u4C" firstAttribute="centerX" secondItem="zQS-cQ-xge" secondAttribute="centerX" id="1kR-eb-Obd"/>
                             <constraint firstItem="zQS-cQ-xge" firstAttribute="bottom" secondItem="eKS-Gv-u4C" secondAttribute="bottom" constant="40" id="9MA-QV-Dhz"/>
@@ -381,5 +366,14 @@
         <image name="loction pin" width="256" height="256"/>
         <image name="logout" width="512" height="512"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="Cart">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="collectionBackround">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
     </resources>
 </document>

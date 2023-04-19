@@ -46,8 +46,9 @@ class OTPViewController: UIViewController {
             // Create and add the text fields
             for i in 1...6 {
                 let textField = UITextField(frame: CGRect(x: x, y: y, width: textFieldWidth, height: textFieldHeight))
-                textField.backgroundColor = UIColor.white
+                textField.backgroundColor = UIColor(named: "collectionBackround")!
                 textField.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+                textField.textColor = UIColor(named: "Cart")
                 textField.textAlignment = .center
                 textField.keyboardType = .numberPad
                 textField.layer.cornerRadius = 5

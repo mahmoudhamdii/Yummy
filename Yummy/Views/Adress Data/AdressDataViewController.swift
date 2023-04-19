@@ -264,6 +264,7 @@ class AdressDataViewController: UIViewController {
         if let index = stackView.arrangedSubviews.firstIndex(of: streetNameTxf) {
             let label = UILabel()
             label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
+            //label.backgroundColor = UIColor(named: "collectionBackround")!
             label.font = UIFont(name:"Almarai-Regular", size: 15)
             label.text = ("\(streetNameTxf.placeholder ?? "")*")
             if streetNameTxf.text != "" {

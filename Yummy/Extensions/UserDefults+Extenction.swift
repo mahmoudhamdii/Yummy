@@ -10,6 +10,7 @@ extension UserDefaults {
     private enum UserDefultsKeys :String {
         case hasOnboarded
         case hasAuthorization
+        case hasEnableDarkMode
     }
     var hasOnboarded :Bool {
         get{
@@ -25,6 +26,14 @@ extension UserDefaults {
         }
         set{
             setValue(newValue, forKey: UserDefultsKeys.hasAuthorization.rawValue)
+        }
+    }
+    var hasEnableDarkMode :Bool {
+        get{
+            bool(forKey: UserDefultsKeys.hasEnableDarkMode.rawValue)
+        }
+        set{
+            setValue(newValue, forKey: UserDefultsKeys.hasEnableDarkMode.rawValue)
         }
     }
 }

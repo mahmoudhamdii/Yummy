@@ -4,8 +4,8 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,9 +15,6 @@
         </array>
         <array key="Almarai-Regular.ttf">
             <string>Almarai-Regular</string>
-        </array>
-        <array key="SourceSerifPro-Light.ttf">
-            <string>SourceSerifPro-Light</string>
         </array>
         <array key="SourceSerifPro-Regular.ttf">
             <string>SourceSerifPro-Regular</string>
@@ -185,7 +182,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ulf-iZ-mdR"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="AHw-fi-E7D" firstAttribute="leading" secondItem="Ulf-iZ-mdR" secondAttribute="leading" id="NM5-HI-8Kp"/>
                             <constraint firstAttribute="bottom" secondItem="AHw-fi-E7D" secondAttribute="bottom" id="X8o-l3-c7l"/>
@@ -276,11 +273,12 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Any special requests?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRK-gS-Szb">
                                         <rect key="frame" x="0.0" y="99" width="361.33333333333331" height="50"/>
+                                        <color key="backgroundColor" name="collectionBackround"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="2Mb-1z-dp6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -312,7 +310,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6oz-Ks-K0w"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="QJk-6r-IzH" firstAttribute="leading" secondItem="6oz-Ks-K0w" secondAttribute="leading" id="6XQ-EY-bQh"/>
                             <constraint firstItem="6oz-Ks-K0w" firstAttribute="trailing" secondItem="aip-10-0Do" secondAttribute="trailing" constant="16" id="X1S-S7-0V1"/>
@@ -351,7 +349,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bb9-BR-zLt"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="sZK-js-GJL" firstAttribute="leading" secondItem="bb9-BR-zLt" secondAttribute="leading" id="C8S-ic-Ylz"/>
                             <constraint firstItem="bb9-BR-zLt" firstAttribute="trailing" secondItem="sZK-js-GJL" secondAttribute="trailing" id="WsI-j1-WA2"/>
@@ -405,7 +403,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex, SidiGaber" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ws-DD-RDY">
                                                         <rect key="frame" x="38" y="129" width="243" height="22.333333333333343"/>
                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Cart"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sq4-r6-ai7">
@@ -414,13 +412,13 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MKH, Safwany Gate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIj-1s-TUg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="321" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="Cart"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile: 01064895256" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q35-HJ-yFg">
                                                                 <rect key="frame" x="0.0" y="22.333333333333343" width="321" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="Cart"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -437,7 +435,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" name="collectionBackround"/>
                                                 <constraints>
                                                     <constraint firstItem="sq4-r6-ai7" firstAttribute="top" secondItem="6ws-DD-RDY" secondAttribute="bottom" constant="7.6666669845581055" id="5HG-h8-oNP"/>
                                                     <constraint firstItem="sq4-r6-ai7" firstAttribute="leading" secondItem="6ws-DD-RDY" secondAttribute="leading" constant="5" id="6Wy-od-S3r"/>
@@ -477,11 +475,11 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Within 30 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQK-eM-8MC">
                                                         <rect key="frame" x="69.333333333333314" y="24.333333333333314" width="289.66666666666669" height="22.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Cart"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" name="collectionBackround"/>
                                                 <constraints>
                                                     <constraint firstItem="HXH-jp-2zX" firstAttribute="centerY" secondItem="9vz-gl-7Dw" secondAttribute="centerY" id="5rS-nD-Vi9"/>
                                                     <constraint firstItem="HXH-jp-2zX" firstAttribute="width" secondItem="9vz-gl-7Dw" secondAttribute="width" multiplier="0.12" id="Ga4-jU-Nue"/>
@@ -507,11 +505,14 @@
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Voucher Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7t-8c-3Zo">
                                                         <rect key="frame" x="69.3333333333333" y="23.666666666666686" width="169.66666666666663" height="24"/>
+                                                        <color key="backgroundColor" name="collectionBackround"/>
+                                                        <color key="textColor" name="Cart"/>
                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukv-hn-5BF">
                                                         <rect key="frame" x="249" y="18.333333333333375" width="112" height="34.333333333333343"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" red="0.58178478479999995" green="0.091433934869999997" blue="0.18514347079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Submit">
@@ -522,7 +523,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" name="collectionBackround"/>
                                                 <constraints>
                                                     <constraint firstItem="C7t-8c-3Zo" firstAttribute="leading" secondItem="55M-u0-uwr" secondAttribute="trailing" constant="15" id="1BG-F6-og0"/>
                                                     <constraint firstItem="Ukv-hn-5BF" firstAttribute="width" secondItem="btd-Bf-F5z" secondAttribute="width" multiplier="0.303252" id="B7j-9l-pGR"/>
@@ -584,11 +585,11 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mm6-dp-hxO">
                                                                         <rect key="frame" x="107" y="16.333333333333371" width="259" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstItem="mm6-dp-hxO" firstAttribute="leading" secondItem="Mi1-7g-jJY" secondAttribute="trailing" constant="12" id="FUl-iA-pvL"/>
                                                                     <constraint firstAttribute="trailing" secondItem="mm6-dp-hxO" secondAttribute="trailing" constant="3" id="Kdy-VV-WBw"/>
@@ -630,11 +631,11 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q4-b2-adf">
                                                                         <rect key="frame" x="107" y="16.333333333333258" width="259" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstItem="caN-S9-qza" firstAttribute="centerY" secondItem="0EZ-V9-EHv" secondAttribute="centerY" id="29e-U8-XA6"/>
                                                                     <constraint firstItem="1Q4-b2-adf" firstAttribute="leading" secondItem="gOd-vb-UI4" secondAttribute="trailing" constant="12" id="4g8-75-0wx"/>
@@ -684,7 +685,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41x-hh-aVF">
                                                                         <rect key="frame" x="0.0" y="0.0" width="62.333333333333336" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTZ-XJ-d0S">
@@ -696,19 +697,19 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwl-rG-v5x">
                                                                         <rect key="frame" x="0.0" y="58" width="86.666666666666671" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RuL-5b-uNj">
                                                                         <rect key="frame" x="0.0" y="87" width="87.666666666666671" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9x-i0-JAQ">
                                                                         <rect key="frame" x="0.0" y="116" width="97" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -719,7 +720,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiL-2l-nmy">
                                                                         <rect key="frame" x="33" y="0.0" width="69" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-EGP 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubH-Q0-LuK">
@@ -731,24 +732,25 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxQ-gY-SLK">
                                                                         <rect key="frame" x="36.333333333333321" y="58" width="65.666666666666686" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTU-18-vxc">
                                                                         <rect key="frame" x="33" y="87" width="69" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EGP 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsB-J0-miD">
                                                                         <rect key="frame" x="33" y="116" width="69" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" name="Cart"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="collectionBackround"/>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfp-xi-aUY">
                                                         <rect key="frame" x="15" y="246" width="339" height="52"/>
@@ -768,7 +770,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" name="collectionBackround"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="pfp-xi-aUY" secondAttribute="bottom" constant="50" id="0FR-UO-P7d"/>
                                                     <constraint firstItem="pfp-xi-aUY" firstAttribute="leading" secondItem="5IH-sO-OSQ" secondAttribute="leading" constant="15" id="ITD-Hx-1V8"/>
@@ -833,7 +835,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n4b-0b-aWr"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="tGZ-xq-czY" firstAttribute="leading" secondItem="n4b-0b-aWr" secondAttribute="leading" id="Eba-po-b2o"/>
                             <constraint firstItem="tGZ-xq-czY" firstAttribute="trailing" secondItem="n4b-0b-aWr" secondAttribute="trailing" id="Eqb-pI-LCs"/>
@@ -908,7 +910,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="background"/>
                                 <constraints>
                                     <constraint firstItem="JBv-vU-j6j" firstAttribute="top" secondItem="UHg-Oj-dVY" secondAttribute="top" constant="5" id="1MP-5C-x3G"/>
                                     <constraint firstItem="HgA-7c-W14" firstAttribute="top" secondItem="JBv-vU-j6j" secondAttribute="bottom" constant="8" id="Nru-AM-Gzu"/>
@@ -932,7 +934,7 @@
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OMh-v2-9Nw"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="UHg-Oj-dVY" firstAttribute="leading" secondItem="OMh-v2-9Nw" secondAttribute="leading" id="2NU-SE-9b9"/>
                             <constraint firstAttribute="bottom" secondItem="UHg-Oj-dVY" secondAttribute="bottom" id="4RB-fG-V4H"/>
@@ -977,7 +979,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B9U-99-sGW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="diU-dU-EZW" firstAttribute="centerX" secondItem="OLK-3p-agI" secondAttribute="centerX" id="41C-rL-p5V"/>
                             <constraint firstItem="xXK-sZ-ETS" firstAttribute="leading" secondItem="B9U-99-sGW" secondAttribute="leading" id="Obi-bN-Qqv"/>
@@ -1029,7 +1031,7 @@
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5v-jc-gsy">
                                                         <rect key="frame" x="125.66666666666667" y="125" width="141.66666666666663" height="50"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" name="collectionBackround"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="N26-aM-91M"/>
                                                         </constraints>
@@ -1046,7 +1048,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="background"/>
                                                 <constraints>
                                                     <constraint firstItem="jBj-An-LSV" firstAttribute="top" secondItem="QDM-FJ-fYe" secondAttribute="top" id="8C2-N8-66o"/>
                                                     <constraint firstItem="pYs-tT-isa" firstAttribute="centerY" secondItem="jBj-An-LSV" secondAttribute="centerY" constant="-45" id="Aqc-5E-5im"/>
@@ -1066,47 +1068,53 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Area" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qW1-iY-af6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="45"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="moV-dr-bBP"/>
                                                                 </constraints>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" name="Cart"/>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SBZ-wA-aWK">
                                                                 <rect key="frame" x="0.0" y="55" width="373" height="45"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="lPC-sz-oF5"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Building Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-Lc-jaJ">
                                                                 <rect key="frame" x="0.0" y="110" width="373" height="45"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="4sB-3q-xgo"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Floor number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7nS-nx-Lmr">
                                                                 <rect key="frame" x="0.0" y="165" width="373" height="45"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="KKc-oT-5GM"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Building name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5p-1e-01W">
                                                                 <rect key="frame" x="0.0" y="220" width="373" height="45"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="LcV-2L-MUq"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="px6-LS-rHb">
                                                                 <rect key="frame" x="0.0" y="275" width="373" height="45"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="oLc-Zk-WhN"/>
                                                                 </constraints>
@@ -1115,41 +1123,46 @@
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Land mark " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AeV-hg-TFr">
                                                                 <rect key="frame" x="0.0" y="330" width="373" height="45"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="9uM-D6-JyZ"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIu-BY-TkU">
                                                                 <rect key="frame" x="0.0" y="385" width="373" height="45"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+20    " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpm-ya-iT4">
                                                                         <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="45"/>
+                                                                        <color key="backgroundColor" name="collectionBackround"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G91-oc-4Na">
                                                                         <rect key="frame" x="53.666666666666686" y="0.0" width="319.33333333333331" height="45"/>
+                                                                        <color key="backgroundColor" name="collectionBackround"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="Opu-m5-fsl"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                                     </textField>
                                                                 </subviews>
+                                                                <color key="backgroundColor" name="background"/>
                                                             </stackView>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Landing number (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hwi-qx-MCe">
                                                                 <rect key="frame" x="0.0" y="440" width="373" height="45"/>
+                                                                <color key="backgroundColor" name="collectionBackround"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="45" id="Df7-5T-yls"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" name="background"/>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcd-GU-JLm">
                                                         <rect key="frame" x="10" y="550" width="373" height="50"/>
@@ -1170,7 +1183,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" name="background"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="fMc-X4-0RB" secondAttribute="trailing" constant="10" id="8rq-FU-LG7"/>
                                                     <constraint firstItem="gcd-GU-JLm" firstAttribute="leading" secondItem="fMc-X4-0RB" secondAttribute="leading" id="Ysw-gp-cdD"/>
@@ -1181,7 +1194,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="background"/>
                                         <constraints>
                                             <constraint firstItem="0KZ-iI-cYa" firstAttribute="leading" secondItem="1Ko-X1-ASE" secondAttribute="leading" id="Gqs-0C-cMI"/>
                                             <constraint firstItem="0KZ-iI-cYa" firstAttribute="top" secondItem="QDM-FJ-fYe" secondAttribute="bottom" id="MZH-aj-29R"/>
@@ -1193,7 +1206,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="background "/>
                                 <constraints>
                                     <constraint firstItem="1Ko-X1-ASE" firstAttribute="width" secondItem="ArO-NO-mOM" secondAttribute="width" id="BI9-wt-5Sw"/>
                                     <constraint firstItem="1Ko-X1-ASE" firstAttribute="top" secondItem="ArO-NO-mOM" secondAttribute="top" id="TSs-5P-cog"/>
@@ -1207,7 +1220,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HCX-bT-o0w"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="ArO-NO-mOM" firstAttribute="leading" secondItem="HCX-bT-o0w" secondAttribute="leading" id="66w-XS-vbM"/>
                             <constraint firstItem="ArO-NO-mOM" firstAttribute="trailing" secondItem="HCX-bT-o0w" secondAttribute="trailing" id="EmL-cy-l3m"/>
@@ -1242,7 +1255,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CJG-MG-3ht"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="background"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSj-44-rLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1263,7 +1276,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Orders Placed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhs-lj-qpY">
                                 <rect key="frame" x="119.33333333333333" y="491" width="154.66666666666669" height="25.333333333333371"/>
                                 <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="20"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="Cart"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your cart is empty.Add something from memu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPq-qD-Xla">
@@ -1272,13 +1285,13 @@
                                     <constraint firstAttribute="height" constant="53" id="edI-Zh-DbD"/>
                                     <constraint firstAttribute="width" constant="219" id="tb0-ro-M2Q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SourceSerifPro-Light" family="Source Serif Pro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SourceSerifPro-Regular" family="Source Serif Pro" pointSize="17"/>
                                 <color key="textColor" red="0.58178478479999995" green="0.091433934869999997" blue="0.18514347079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hpq-Oh-S33"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="mPq-qD-Xla" firstAttribute="centerX" secondItem="71l-CQ-PLq" secondAttribute="centerX" id="1LB-sr-ubp"/>
                             <constraint firstItem="zhs-lj-qpY" firstAttribute="top" secondItem="vBh-7Z-Dod" secondAttribute="bottom" constant="30" id="5Uh-c1-zJZ"/>
@@ -1307,8 +1320,17 @@
         <image name="delivery" width="256" height="256"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="loction pin" width="256" height="256"/>
-        <systemColor name="systemBackgroundColor">
+        <namedColor name="Cart">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="background ">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="collectionBackround">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        </namedColor>
     </resources>
 </document>

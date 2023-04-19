@@ -71,7 +71,7 @@ class HomeViewController: UIViewController {
         button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         button.layer.cornerRadius = button.frame.width / 2.0
         
-        let color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let color = UIColor(named: "Cart")!
         button.setImage(UIImage(systemName: "cart.fill")!.withTintColor(color, renderingMode: .alwaysOriginal), for: .normal)
         let badgeLabel = UILabel(frame: CGRect(x: button.frame.width - 18, y: 25, width: 20, height: 20))
         badgeLabel.layer.cornerRadius = badgeLabel.frame.width / 2.0
@@ -170,3 +170,4 @@ extension HomeViewController :UICollectionViewDelegate , UICollectionViewDelegat
     
     
 }
+

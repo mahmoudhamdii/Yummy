@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+       
+        if UserDefaults.standard.hasEnableDarkMode  {
+        
+            print("saknj")
+        }
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current()
             .requestAuthorization(options: [.sound,.alert,.badge]) { approve, error in
@@ -27,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
                     ProgressHUD.showError(error?.localizedDescription)
                 }
             }
-
+        
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         FirebaseApp.configure()
