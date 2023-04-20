@@ -179,7 +179,8 @@ class CheckOutViewController: UIViewController ,UITextFieldDelegate {
         if visa || cash {
             if cash {
                 ProgressHUD.showSucceed("Your order has been recived")
-                ProfileViewController.ordersCount += 1 
+                ProfileViewController.ordersCount += 1
+                ListOrderViewController.ordersCount
                 if let navController = self.navigationController {
                     navController.popToRootViewController(animated: true)
                 }

@@ -20,9 +20,10 @@ class AdressDataViewController: UIViewController {
     var landMarkFlag = true
     var mobileNumberFlag = true
     var optionalNumberFlag = true
-   var arrBuildingType = ["Street" ,"Cafe","House","Office"]
+    var arrBuildingType = ["Street" ,"Cafe","House","Office"]
     @IBOutlet weak var addressMapView: MKMapView!
     var currentindex = 0
+    var mySet = Set<UITextField>()
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var optionalLandingNumber: UITextField!
     @IBOutlet weak var mobileNumber: UITextField!
@@ -51,270 +52,39 @@ class AdressDataViewController: UIViewController {
         addressMapView.isScrollEnabled = false
         addressMapView.isZoomEnabled = false
         addressMapView.isUserInteractionEnabled = false
-        btnRefineLocationSetup()
-        fieldStyle(fields: [areaTxf,streetNameTxf,buildingType,floorNumber,buildingName,adressName,landMark,mobileNumber,optionalLandingNumber])
-        //        areaTxf.delegate = self
-        //        streetNameTxf.delegate = self
-        //        buildingName.delegate = self
-        //        buildingType.delegate = self
-        //        floorNumber.delegate = self
-        //        adressName.delegate = self
-        //        landMark.delegate = self
-        //        optionalLandingNumber.delegate = self
+        btnRefineLoction.addBorder
+        UITextField.addFieldsLine(fields: [areaTxf,streetNameTxf,buildingType,floorNumber,buildingName,adressName,landMark,mobileNumber,optionalLandingNumber])
+        addDelgate(fields: [areaTxf,streetNameTxf,buildingName,buildingType,floorNumber,adressName,landMark,optionalLandingNumber])
+        
         navigationController?.navigationBar.tintColor =   #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
         navigationItem.backButtonTitle = ""
-        areaTxf.addTarget(self, action: #selector(creatAreaLable), for: .editingChanged)
-        streetNameTxf.addTarget(self, action: #selector(creatStreetNameLable), for: .editingChanged)
-        buildingType.addTarget(self, action: #selector(creatBuildingTypeLable), for: .editingChanged)
-        buildingName.addTarget(self, action: #selector(creatBuildingNameLable), for: .editingChanged)
-        floorNumber.addTarget(self, action: #selector(creatFloorNumberLable), for: .editingChanged)
-        adressName.addTarget(self, action: #selector(creatadressNameLable), for: .editingChanged)
-        landMark.addTarget(self, action: #selector(creatLandMarkLable), for: .editingChanged)
-        mobileNumber.addTarget(self, action: #selector(creatMobileNumberLable), for: .editingChanged)
-        optionalLandingNumber.addTarget(self, action: #selector(creatOptionalNumberLable), for: .editingChanged)
+        
         if areaName != ""{
             areaTxf.text = areaName
         }
         
         
     }
-  
- 
-     
-       
-    func fieldStyle(fields:[UITextField]){
+    
+    func addDelgate(fields:[UITextField]){
         for textField in fields{
-            let bottomLine = CALayer()
-            bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 1, width: textField.frame.width, height: 1)
-            bottomLine.backgroundColor =  #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1).cgColor
-            textField.layer.addSublayer(bottomLine)
+            textField.delegate = self
         }}
-    @objc func creatOptionalNumberLable(){
-        if let index = stackView.arrangedSubviews.firstIndex(of: optionalLandingNumber) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(optionalLandingNumber.placeholder ?? "")*")
-            if optionalLandingNumber.text != "" {
-                if optionalNumberFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    optionalNumberFlag = false
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: optionalLandingNumber){
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    optionalNumberFlag = true
-            }}
-        }
-        
-        
-    }
     
-    @objc func creatMobileNumberLable(){
-        if let index = stackView.arrangedSubviews.firstIndex(of: mobileNumber) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(mobileNumber.placeholder ?? "")*")
-            if mobileNumber.text != "" {
-                if mobileNumberFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    mobileNumberFlag = false
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: mobileNumber){
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    mobileNumberFlag = true
-                }}
-            
-        }
-        
-        
-    }
-    @objc func creatLandMarkLable(){
-        if let index = stackView.arrangedSubviews.firstIndex(of: landMark) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(landMark.placeholder ?? "")*")
-            if landMark.text != "" {
-                if landMarkFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    landMarkFlag = false
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: landMark){
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    landMarkFlag = true
-            }}
-        }
-        
-        
-        
-    }
-    @objc func creatadressNameLable(){
-        if let index = stackView.arrangedSubviews.firstIndex(of: adressName) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(adressName.placeholder ?? "")*")
-            if adressName.text != "" {
-                if adressFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    adressFlag = false
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: adressName){
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    adressFlag = true
-                }}
-            
-            
-        }
-        
-    }
-    @objc func creatFloorNumberLable(){
-        if let index = stackView.arrangedSubviews.firstIndex(of: floorNumber) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(floorNumber.placeholder ?? "")*")
-            if floorNumber.text != "" {
-                if floorFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    floorFlag = false
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: floorNumber){
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    floorFlag = true
-                }}
-        }
-        
-        
-        
-    }
-    @objc func creatBuildingNameLable(){
-        if let index = stackView.arrangedSubviews.firstIndex(of: buildingName) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(buildingName.placeholder ?? "")*")
-            if buildingName.text != "" {
-                if buildingNameFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    buildingNameFlag = false
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: buildingName){
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    buildingNameFlag = true
-                }
-            }
-        }
-        
-        
-        
-    }
-    @objc func creatAreaLable(){
-        
-        if let index = stackView.arrangedSubviews.firstIndex(of: areaTxf) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(areaTxf.placeholder ?? "")*")
-            label.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-            
-            if areaTxf.text != "" {
-                if areaFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    areaFlag = false
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: areaTxf)  {
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    areaFlag = true
-                }}
-        }
-        
-        
-    }
-    @objc func creatStreetNameLable(){
-        if let index = stackView.arrangedSubviews.firstIndex(of: streetNameTxf) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            //label.backgroundColor = UIColor(named: "collectionBackround")!
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(streetNameTxf.placeholder ?? "")*")
-            if streetNameTxf.text != "" {
-                if streetFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    streetFlag = false
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: streetNameTxf){
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    streetFlag = true
-                }}
-        }
-        
-        
-    }
-    @objc func creatBuildingTypeLable(){
-       
-        if let index = stackView.arrangedSubviews.firstIndex(of: buildingType) {
-            let label = UILabel()
-            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
-            label.font = UIFont(name:"Almarai-Regular", size: 15)
-            label.text = ("\(buildingType.placeholder ?? "")*")
-            if buildingType.text != "" {
-                if buildingTypeFlag{
-                    stackView.insertArrangedSubview(label, at: index)
-                    buildingTypeFlag = false
-                    
-                }
-            }else{
-                if let x = stackView.arrangedSubviews.firstIndex(of: buildingType){
-                    var indexToRemove = x-1
-                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
-                    stackView.removeArrangedSubview(subviewToRemove)
-                    subviewToRemove.removeFromSuperview()
-                    buildingTypeFlag = true
-                }}
-        }
-        
-        
-        
-    }
     
-    func btnRefineLocationSetup(){
-        btnRefineLoction.layer.borderWidth = 2
-        btnRefineLoction.layer.borderColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1).cgColor
-    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     @IBAction func btnRefineLocationAction(_ sender: Any) {
@@ -322,8 +92,8 @@ class AdressDataViewController: UIViewController {
     }
     
     @IBAction func btnSaveAdressAction(_ sender: Any) {
-        if validateTextFields(fields: [areaTxf,streetNameTxf,buildingName,buildingType,floorNumber,adressName,landMark,mobileNumber]) {
-            if isValidEgyptPhoneNumber(mobileNumber.text!){
+        if UITextField.validateEmptyFields(fields: [areaTxf,streetNameTxf,buildingName,buildingType,floorNumber,adressName,landMark,mobileNumber]) {
+            if Utalities.isValidEgyptPhoneNumber(mobileNumber.text!){
                 //send OTP to mobile number
                 sendOTP(mobile :mobileNumber.text!)
                 //validate OTp
@@ -334,7 +104,7 @@ class AdressDataViewController: UIViewController {
                 controller.mobile = mobileNumber.text!
                 navigationController?.pushViewController(controller, animated: true)
             }else{
-               showAlert(tittle: "Unavailable", msg: "please enter Valid phone number ")
+                showAlert(tittle: "Unavailable", msg: "please enter Valid phone number ")
             }
             
             
@@ -347,41 +117,49 @@ class AdressDataViewController: UIViewController {
     func sendOTP (mobile :String){
         
     }
-    func isValidEgyptPhoneNumber(_ phoneNumber: String) -> Bool {
-        let regex = #"^(10|11|12|15)\d{8}$"#
-        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: phoneNumber)
-    }
     
-    func validateTextFields(fields:[UITextField]) -> Bool {
-        var isValid = true
-        
-        
-        for textField in fields {
-            
-            if textField.text?.isEmpty ?? true {
-                isValid = false
-                break
-            }
-        }
-        
-        return isValid
-    }
+    
+
     func  showAlert(tittle:String,msg:String){
         let alertController = UIAlertController(title: tittle, message: msg, preferredStyle: .alert)
-    
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
         
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            
         }
         alertController.addAction(okAction)
-
+        
         self.present(alertController, animated: true, completion: nil)
-
+        
+        
+        
     }
-
     
+    func creatFieldsLabel(textField:UITextField){
+        if let index = stackView.arrangedSubviews.firstIndex(of: textField) {
+            let label = UILabel()
+            label.textColor = #colorLiteral(red: 0.5803921569, green: 0.09019607843, blue: 0.1843137255, alpha: 1)
+            label.font = UIFont(name:"Almarai-Regular", size: 15)
+            label.text = ("\(textField.placeholder ?? "")*")
+            if textField.text != "" {
+                if !mySet.contains(textField){
+                    stackView.insertArrangedSubview(label, at: index)
+                    mySet.insert(textField)
+                }
+            }else{
+                if let x = stackView.arrangedSubviews.firstIndex(of: textField){
+                    let indexToRemove = x-1
+                    let subviewToRemove = stackView.arrangedSubviews[indexToRemove]
+                    stackView.removeArrangedSubview(subviewToRemove)
+                    subviewToRemove.removeFromSuperview()
+                    mySet.remove(textField)
+                }}
+        }
+        
+        
+    }
 }
 
-extension AdressDataViewController :UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
+extension AdressDataViewController :UIPickerViewDelegate,UIPickerViewDataSource{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -403,4 +181,63 @@ extension AdressDataViewController :UIPickerViewDelegate,UIPickerViewDataSource,
         buildingType.text = arrBuildingType[currentindex]
         view.endEditing(true)
     }
+    
+}
+
+
+
+
+
+extension AdressDataViewController :UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case areaTxf :
+            streetNameTxf.becomeFirstResponder()
+        case streetNameTxf :
+            buildingType.becomeFirstResponder()
+        case buildingType :
+            floorNumber.becomeFirstResponder()
+        case floorNumber :
+            buildingName.becomeFirstResponder()
+        case buildingName :
+            adressName.becomeFirstResponder()
+        case adressName :
+            landMark.becomeFirstResponder()
+        case landMark :
+            mobileNumber.becomeFirstResponder()
+        case mobileNumber:
+            optionalLandingNumber.becomeFirstResponder()
+        case optionalLandingNumber :
+            btnSaveAdressAction(UIButton.self)
+        default:
+            break
+        }
+        return true
+    }
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        switch textField {
+        case areaTxf :
+            creatFieldsLabel(textField: areaTxf)
+        case streetNameTxf :
+            creatFieldsLabel(textField: streetNameTxf)
+        case buildingType :
+            creatFieldsLabel(textField: buildingType)
+        case floorNumber :
+            creatFieldsLabel(textField: floorNumber)
+        case buildingName :
+            creatFieldsLabel(textField: buildingName)
+        case adressName :
+            creatFieldsLabel(textField:adressName )
+        case landMark :
+            creatFieldsLabel(textField: landMark)
+        case mobileNumber:
+            creatFieldsLabel(textField: mobileNumber)
+        case optionalLandingNumber :
+            creatFieldsLabel(textField: optionalLandingNumber)
+        default:
+            break
+        }
+    }
+    
 }

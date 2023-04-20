@@ -17,9 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        
         if UserDefaults.standard.hasEnableDarkMode  {
-        
-            print("saknj")
-        }
+            if #available(iOS 13.0, *) {
+                UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .dark
+                
+            }else{
+                if #available(iOS 13.0, *) {
+                    UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
+                }
+            }}
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current()
             .requestAuthorization(options: [.sound,.alert,.badge]) { approve, error in
